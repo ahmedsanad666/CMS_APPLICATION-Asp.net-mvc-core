@@ -1,0 +1,56 @@
+﻿@model CMScenter.Views.Models.PostsCategory;
+
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+
+    ViewData["Title"] = "delete Post Category";
+}
+
+
+
+<section class="control_page Add_member flex-column min-vh-100 ">
+    <partial name="_AdminNav" />
+  
+
+
+    @if (culture == "en")
+    {
+
+
+        <h1 class="text-center py-  "> Delete post Category</h1>
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 ">  حذف قسم </h1>
+
+    }
+    <div class="settingsData  mt-3">
+        <form method="post" asp-action="delete">
+            <input asp-for="Id" hidden />
+
+
+            <div class="row gap-1">
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="arName"></label>
+                    <input type="text" asp-for="arName" />
+                    <span asp-validation-for="arName" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enName  "></label>
+                    <input type="text" asp-for="enName" />
+                    <span asp-validation-for="enName" class="text-danger"></span>
+                </div>
+               
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="Admin" asp-controller="PostCategory" asp-action="Index">Back</a>
+                    <button class="edit btn btn-danger" type="submit">Delete</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

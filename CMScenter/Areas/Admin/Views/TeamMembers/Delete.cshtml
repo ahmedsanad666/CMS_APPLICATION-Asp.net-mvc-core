@@ -1,0 +1,67 @@
+﻿
+@model CMScenter.Views.Models.TeamMember
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+ 
+    ViewData["Title"] = "Delete Membres";
+}
+
+
+
+<section class="control_page Add_member flex-column ">
+    <partial name="_AdminNav" />
+
+
+    @if (culture == "en")
+    {
+
+    <h1 class="text-center py-5  ">Delete Team Member</h1>
+
+    }
+    else
+    {
+    <h1 class="text-center my-5 "> حذف عضو </h1>
+    }
+
+    <div class="settingsData  mt-3">
+        <form method="post" asp-action="delete" enctype="multipart/form-data">
+            <input asp-for="Id" hidden />
+            <input asp-for="Image" hidden />
+          
+
+            <div class="row g-1">
+
+
+                <div class="col-12 col-md-6 ">
+                    <label asp-for="Image"></label>
+                   <img src="@Model.Image" />
+                </div>
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enName"></label>
+                    <input disabled type="text" asp-for="enName" />
+                   
+                </div>
+                @*........................*@
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enPosition"></label>
+                    <input disabled type="text" asp-for="enPosition" />
+                  
+                </div>
+                @*........................*@
+
+              
+              
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="Admin" asp-controller="Admin" asp-action="Index">Back</a>
+                    <button class="btn btn-danger" type="submit">Delete</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

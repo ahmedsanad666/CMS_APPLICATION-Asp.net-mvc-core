@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model CMScenter.Views.Models.Services;
+@{
+    ViewData["Title"] = "Add Service";
+}
+
+
+
+<section class="control_page flex-column ">
+       <partial name="_AdminNav" />
+    <h1 class="text-center my-5 "> App Service
+    </h1>
+
+    <div class="settingsData mt-3">
+        <form method="post" asp-action="Create"  enctype="multipart/form-data">
+
+            <input asp-for="Id" hidden />
+            <input asp-for="Image" hidden />
+
+            <div class="row g-3">
+
+
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arName"></label>
+                    <input type="text" asp-for="arName" />
+                    <span asp-validation-for="arName" class="text-danger"></span>
+                </div>
+                @*........................*@ 
+                <div class="col-12 col-md-6">
+                    <label asp-for="enName"></label>
+                    <input type="text" asp-for="enName" />
+                    <span asp-validation-for="enName" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arDescription"></label>
+                    <textarea asp-for="arDescription" rows="3"></textarea>
+                    <span asp-validation-for="arDescription" class="text-danger"></span>
+
+                </div>
+               
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enDescription"></label>
+                    <textarea asp-for="enDescription" rows="3"></textarea>
+                    <span asp-validation-for="enDescription" class="text-danger"></span>
+
+                </div>
+               
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="ConstructorName"></label>
+                  
+                    <input  type="text" asp-for="ConstructorName" />
+                    <span asp-validation-for="ConstructorName" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="CourseLink"></label>
+                    <input type="text" asp-for="CourseLink" />
+                    <span asp-validation-for="CourseLink" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+                <div class="col-12 col-md-6 ">
+                    <label asp-for="Image"></label>
+                    <input type="file" asp-for="Image" name="file" />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="StartDate"></label>
+                    <span>formate day-month-year</span>
+                    <input type="datetime" asp-for="StartDate" />
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </div>
+                @*........................*@
+              
+                <div class="col-12 col-md-6">
+                    <label asp-for="CourseCategoryId"></label>
+                    <select asp-for="CourseCategoryId" asp-items="ViewBag.CategoryList">
+                       <option >--Category</option>
+                   </select>
+                    <span asp-validation-for="CourseCategoryId" class="text-danger"></span>
+                </div>
+             
+               
+              
+                @*........................*@
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="Admin" asp-controller="Category" asp-action="Index" >Back</a>
+                    <button class="edit" type="submit">submit</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,88 @@
+﻿@model List<CMScenter.Views.Models.PostsCategory>
+@{
+    ViewData["Title"] = "post Categories";
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+}
+
+
+
+
+
+<section class="CategoryPage min-vh-100 ">
+    <partial name="_AdminNav" />
+    @if (culture == "en")
+    {
+
+    
+    <h1 class="text-center py-5  "> Post Categories</h1>
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 "> اقسام المقالات</h1>
+
+    }
+    <div class="adminContent">
+
+
+        <div class="adminCards">
+            <div class="row g-4">
+                @foreach (var el in Model)
+                {
+
+
+                    // Use the result in the view
+
+                    <div class="col-12 col-md-6 col-lg-3">
+
+
+
+                        <div class="cart settings d-flex flex-column justify-content-center align-items-center">
+                            <div class="CategoryControl d-flex justify-content-evenly gap-3">
+                                <a asp-area="Admin" asp-controller="PostCategory" asp-action="Edit" asp-route-id="@el.Id">
+                                    <i class="fa-solid fa-pen-to-square fa-lg"></i>
+                                </a>
+
+                                <a asp-area="Admin" asp-controller="PostCategory" asp-action="delete" asp-route-id=@el.Id>
+                                    <i class="fa-solid fa-trash fa-lg"></i>
+                                </a>
+                            </div>
+                            <div>
+                                @if(culture == "en")
+                                {
+                                    
+                                    <h3>  @el.enName</h3>
+                                }
+                                else{
+                                    <h3>  @el.arName</h3>
+                        
+                                    
+                                    }
+                                  
+                            </div>
+                            <span class="settings_updated_date"> 12/10-2000 AM </span>
+
+                        </div>
+
+                    </div>
+
+                }
+                @*..........*@
+                <div class="col-12 col-md-6 col-lg-3">
+                    <a asp-area="Admin" asp-controller="PostCategory" asp-action="Create">
+                        <div class="cart AddCategory d-flex justify-content-center align-items-center partners">
+
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</section>

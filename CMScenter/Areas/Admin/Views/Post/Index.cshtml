@@ -1,0 +1,139 @@
+﻿@model List<CMScenter.Views.Models.Posts>
+@{
+    var culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    ViewData["Title"] = "Posts";
+
+}
+
+
+<section class="CategoryPage min-vh-100">
+    <partial name="_AdminNav" />
+
+    @if (culture == "en")
+    {
+
+    <h1 class="text-center my-3 py-5">Posts Page</h1>
+
+      
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 ">  المقالات</h1>
+
+    }
+
+
+
+
+
+
+
+        <div class="add_new_post container ">
+
+    
+    <a asp-ara="Admin" asp-controller="Post" asp-action="Create" >Add New <i class="bi bi-plus-circle ms-3"></i></a>
+        </div>
+    <table class="table table-striped table-dark container px-5">
+
+    
+        <thead>
+            <tr>
+                @if(culture == "en")
+                {
+                    <th scope="col"> Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Image</th>
+
+                    <th scope="col">Created Date</th>
+                    <th scope="col">Controllers</th>
+                }
+                else{
+                    <th scope="col"> الاسم</th>
+                    <th scope="col">القسم</th>
+                    <th scope="col">الوصف</th>
+                    <th scope="col">الصورة</th>
+
+                    <th scope="col">تاريخ النشر</th>
+                    <th scope="col">التحكم</th>
+                    }
+
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var el in Model)
+            {
+
+                @if(culture == "en")
+                {
+                <tr>
+               
+               
+                <td>@el.enTitle</td>
+
+                <td>@el.postsCategory.enName</td> 
+               
+                <td>
+                    <p class="postDesAdmin">
+
+                   @el.enDes
+                    </p>
+                    </td> 
+                    <td>
+                            <div class="PostImageAdmin">
+                                <img src="     @el.PostImage" />
+
+                            </div>
+                    </td>
+                    <td>
+                        @el.postDate
+                    </td>
+                        <td class="d-flex flex-column flex-md-row gap-2 postControllers">
+                        <a class="btn btn-success " asp-area="Admin" asp-controller="Post" asp-action="Edit" asp-route-id="@el.Id">Edit</a>
+                        <a class="btn btn-danger " asp-area="Admin" asp-controller="Post" asp-action="delete" asp-route-id="@el.Id">Delete</a>
+                    </td>
+
+            </tr>
+
+                }
+                else
+                {
+                    <tr>
+
+
+                        <td>@el.arTitle</td>
+
+                        <td>@el.postsCategory.arName</td>
+
+                        <td>
+                            <p class="postDesAdmin">
+
+                                @el.arDes
+                            </p>
+                        </td> 
+                        <td>
+                            <div class="PostImageAdmin">
+                                <img src="     @el.PostImage" />
+                       
+                            </div>
+                        </td>
+                        <td>
+                            @el.postDate
+                        </td>
+                        <td class="d-flex flex-column flex-md-row gap-2 postControllers">
+                            <a class="btn btn-success " asp-area="Admin" asp-controller="Post" asp-action="Edit" asp-route-id="@el.Id">Edit</a>
+                            <a class="btn btn-danger " asp-area="Admin" asp-controller="Post" asp-action="delete" asp-route-id="@el.Id">Delete</a>
+                        </td>
+
+                    </tr>
+                }
+                
+            
+            }
+ 
+        </tbody>
+    </table>
+    </section>

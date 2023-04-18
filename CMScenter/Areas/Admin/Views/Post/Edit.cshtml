@@ -1,0 +1,102 @@
+﻿@model CMScenter.Views.Models.Posts;
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+
+    ViewData["Title"] = "Add Post";
+}
+
+
+
+<section class="control_page flex-column ">
+    <partial name="_AdminNav" />
+    
+
+    @if (culture == "en")
+    {
+
+        <h1 class="text-center my-5 ">
+
+            Edit Post
+        </h1>
+
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 ">  تعديل </h1>
+
+    }
+
+
+    <div class="settingsData mt-3">
+        <form method="post" asp-action="Edit" enctype="multipart/form-data">
+
+            <input asp-for="Id" hidden />
+            <input asp-for="PostImage" hidden />
+
+            <div class="row g-3">
+
+
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arTitle"></label>
+                    <input type="text" asp-for="arTitle" />
+                    <span asp-validation-for="arTitle" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enTitle"></label>
+                    <input type="text" asp-for="enTitle" />
+                    <span asp-validation-for="enTitle" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arDes"></label>
+                    <textarea asp-for="arDes" rows="3"></textarea>
+                    <span asp-validation-for="arDes" class="text-danger"></span>
+
+                </div>
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enDes"></label>
+                    <textarea asp-for="enDes" rows="3"></textarea>
+                    <span asp-validation-for="enDes" class="text-danger"></span>
+
+                </div>
+
+                @*........................*@
+
+
+
+
+                <div class="col-12 col-md-6 ">
+                    <label asp-for="PostImage"></label>
+                    <input type="file" asp-for="PostImage" name="file" />
+                    <span asp-validation-for="PostImage" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="postsCategoryId"></label>
+                    <select asp-for="postsCategoryId" asp-items="ViewBag.PostCategoryList">
+                        <option>--Category</option>
+                    </select>
+                    <span asp-validation-for="postsCategoryId" class="text-danger"></span>
+                </div>
+
+
+
+                @*........................*@
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="Admin" asp-controller="Post" asp-action="Index">Back</a>
+                    <button class="edit" type="submit">submit</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

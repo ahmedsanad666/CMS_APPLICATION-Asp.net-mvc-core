@@ -1,0 +1,224 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model CMScenter.Views.Models.ViewModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer;
+@inject UserManager<IdentityUser> UserManager
+@{
+
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    ViewData["Title"] = "Admin Page";
+}
+
+
+<section class="adminPage min-vh-100 ">
+
+    @*
+        sidebar
+    *@
+    <div class="sideBar d-flex flex-column ">
+
+        <div class="d-flex flex-row justify-content-between">
+    
+            <div class="brand">
+                @*<img src="~/images/logo.png"/>*@
+                <img src="@Model.appSettings.Logo" />
+            </div>
+             <i class="bi bi-list " id="humburg"></i>
+        </div>        
+        <div class="text-center">
+            <h6>@UserManager.GetUserName(User)</h6>
+        </div>
+      
+    </div>
+
+     
+    @*
+        main content
+    *@
+
+    <div class="adminContent">
+
+        <div >
+
+        <div class="header">
+                @if(culture == "en")
+                {
+                    
+                    <h1 class="text-start">@localizer["Dash"]</h1>
+                }
+                else
+                {
+                    <h1 class="text-end">@localizer["Dash"]</h1>
+                
+                }
+                @if(culture == "en")
+                {
+
+                    <h4> <strong>Welcome aboard, </strong>  @UserManager.GetUserName(User)</h4>
+                }
+                else
+                {
+                    <h3><strong>مرحبا </strong>, @UserManager.GetUserName(User)</h3>
+                    
+                }
+
+        </div>
+    @*
+        admin boxs
+    *@
+    <div class="adminCards">
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+                <a asp-area="Admin" asp-controller="Appsettings" asp-action="Index">
+
+                <div class="cart settings">
+                                @if (culture == "en")
+                                {
+
+                                <h3> <i class="bi bi-gear me-3"></i>App Settings</h3>
+                                }
+                                else
+                                {
+                                <h3> <i class="bi bi-gear mx-3"></i>اعدادات الموقع</h3>
+                                    
+                                }
+
+                                <span class="settings_updated_date"> @Model.appSettings.LastUpdated.ToLongDateString() </span>
+
+                </div>
+                </a>
+            </div>
+            @*..........*@ 
+            <div class="col-12 col-md-6 col-lg-3">
+                <a asp-area="Admin" asp-controller="teamMembers" asp-action="Index">
+
+                <div class="cart team">
+                                @if (culture == "en")
+                                {
+
+                        <h3> <i class="bi bi-microsoft-teams mx-3"></i>Team Members</h3>
+                                }
+                                else
+                                {
+                        <h3> <i class="bi bi-microsoft-teams mx-3"></i>اعضاء الفريق</h3>
+
+                                }
+                         
+                      <h6>@ViewBag.teamCount+ Member</h6>
+                        <span class="settings_updated_date">@Model.TeamMember.</span>
+                </div>
+                </a>
+            </div>
+            @*..........*@ 
+            <div class="col-12 col-md-6 col-lg-3">
+                        <a asp-area="Admin" asp-controller="Category" asp-action="Index">
+                <div class="cart services">
+                                @if (culture == "en")
+                                {
+                        <h3> <i class="bi bi-collection-play mx-3"></i>Services</h3>
+
+                                }
+                                else
+                                {
+                        <h3> <i class="bi bi-collection-play mx-3"></i>خدمات</h3>
+
+                                }
+                         
+                        <h6>20+ category</h6>
+                        <h6>100+ course</h6>
+                        <span class="settings_updated_date">Mon, April, 2023</span>
+                </div>
+                </a>
+            </div>
+            @*..........*@ 
+            <div class="col-12 col-md-6 col-lg-3">
+                        <a href="#">
+                <div class="cart partners">
+                                @if (culture == "en")
+                                {
+
+                        <h3> <i class="bi bi-share mx-3"></i>Partners</h3>
+                                }
+                                else
+                                {
+                        <h3> <i class="bi bi-share mx-3"></i>الجهات الداعمة</h3>
+
+                                }
+                         <h6>40+ institution</h6>
+                        <span class="settings_updated_date">Mon, April, 2023</span>
+
+                </div>
+                </a>
+            </div>
+            @*..........*@
+            <div class="col-12 col-md-6 col-lg-3">
+                        <a asp-area="Admin" asp-controller="SubMenu" asp-action="Index">
+                <div class="cart submenuControl">
+                                @if (culture == "en")
+                                {
+
+                        <h3> <i class="bi bi-share mx-3"></i>subMenu</h3>
+                                }
+                                else
+                                {
+                        <h3> <i class="bi bi-share mx-3"></i>القائمة الفرعية</h3>
+
+                                }
+                        
+                        <span class="settings_updated_date">Mon, April, 2023</span>
+
+                </div>
+                </a>
+            </div>
+            @*..........*@
+
+           
+            <div class="col-12 col-md-6 col-lg-3">
+                        <a asp-area="Admin" asp-controller="PostCategory" asp-action="Index">
+                <div class="cart submenuControl">
+                     @if (culture == "en")
+                                {
+
+                                <h3> <i class="bi bi-share mx-3"></i> Post Category </h3>
+                                }
+                                else
+                                {
+                                    
+                                <h3> <i class="bi bi-share mx-3"></i> اقسام المقالات </h3>
+                                }
+                        
+                        <span class="settings_updated_date">Mon, April, 2023</span>
+
+                </div>
+                </a>
+            </div>
+            @*..........*@ 
+            <div class="col-12 col-md-6 col-lg-3">
+                        <a asp-area="Admin" asp-controller="Post" asp-action="Index">
+                <div class="cart submenuControl">
+                                @if (culture == "en")
+                                {
+
+                                <h3> <i class="bi bi-share mx-3"></i> Posts </h3>
+                                }
+                                else
+                                {
+                                <h3> <i class="bi bi-share mx-3"></i> المقالات </h3>
+
+                                }
+                        
+                        <span class="settings_updated_date">Mon, April, 2023</span>
+
+                </div>
+                </a>
+            </div>
+            @*..........*@
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+   
+</section>

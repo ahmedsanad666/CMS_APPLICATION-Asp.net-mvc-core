@@ -1,0 +1,128 @@
+﻿
+@model CMScenter.Views.Models.TeamMember
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+
+    ViewData["Title"] = "CreateTeamMember";
+}
+
+
+<section class="control_page Add_member flex-column ">
+    <partial name="_AdminNav" />
+    @if (culture == "en")
+    {
+
+        <h1 class="text-center my-5 "> Add Team Member</h1>
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 "> اضافة عضو للفريق</h1>
+    }
+    
+
+    <div class="settingsData  mt-3">
+        <form method="post" asp-action="Create" enctype="multipart/form-data">
+               <input asp-for="Id" hidden />
+            <input asp-for="Image" hidden />
+           @* <input asp-for="Id" hidden />*@
+         @*   <input asp-for="Image" hidden />*@
+
+            <div class="row g-1">
+
+
+                <div class="col-12 col-md-6 ">
+                    <label asp-for="Image"></label>
+                <input id="imgBox" type="file" name="file" asp-for="Image" />
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arName"></label>
+                    <input type="text" asp-for="arName" />
+                    <span asp-validation-for="arName" class="text-danger"></span>
+                </div>
+                @*........................*@  
+                <div class="col-12 col-md-6">
+                    <label asp-for="enName"></label>
+                    <input type="text" asp-for="enName" />
+                    <span asp-validation-for="enName" class="text-danger"></span>
+                </div>
+                @*........................*@
+                
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arPosition"></label>
+                    <input type="text" asp-for="arPosition"/>
+                    <span asp-validation-for="arPosition" class="text-danger"></span>
+                </div> @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enPosition"></label>
+                    <input type="text" asp-for="enPosition"a/>
+                    <span asp-validation-for="enPosition" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="FaceBook"></label>
+                    <input  type="text" asp-for="FaceBook" />
+                    <span asp-validation-for="FaceBook" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="Twitter"></label>
+                    <input type="text" asp-for="Twitter" />
+                    <span asp-validation-for="Twitter" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="Youtube"></label>
+                    <input type="text" asp-for="Youtube" />
+                    <span asp-validation-for="Youtube" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="Instagram"></label>
+                    <input type="text" asp-for="Instagram" />
+                    <span asp-validation-for="Instagram" class="text-danger"></span>
+                </div>
+               
+             
+                @*........................*@
+               
+                <div class="col-12 col-md-6">
+                    <label asp-for="TelefonNum"></label>
+                    <input type="text" asp-for="TelefonNum " />
+                    <span asp-validation-for="TelefonNum" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                <label asp-for="arBriefDes"></label>
+                <textarea asp-for="arBriefDes" rows="3"></textarea>
+                <span asp-validation-for="arBriefDes" class="text-danger"></span>
+
+                </div>
+                @*...........*@  
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                <label asp-for="enBriefDes"></label>
+                <textarea asp-for="enBriefDes" rows="3"></textarea>
+                <span asp-validation-for="enBriefDes" class="text-danger"></span>
+
+                </div>
+                @*...........*@
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="Admin" asp-controller="Admin" asp-action="Index">Back</a>
+                    <button class="edit" type="submit">submit</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

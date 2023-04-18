@@ -1,0 +1,100 @@
+﻿@model CMScenter.Views.Models.SubmenuBox
+
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+
+    ViewData["Title"] = "Edit subMenu";
+}
+
+
+<section class="control_page Add_member flex-column ">
+    <partial name="_AdminNav" />
+    @if (culture == "en")
+    {
+    <h1 class="text-center my-5 "> Edit submenu</h1>
+
+    
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 ">  تعديل القائمة الفرعية</h1>
+
+    }
+
+    <div class="settingsData  mt-3">
+        <form method="post" asp-action="Edit">
+            <input asp-for="Id" hidden />
+           
+
+            <div class="row g-1">
+
+
+             
+                @*........................*@
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arName"></label>
+                    <input type="text" asp-for="arName" />
+                    <span asp-validation-for="arName" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enName"></label>
+                    <input type="text" asp-for="enName" />
+                    <span asp-validation-for="enName" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arsubItem1"></label>
+                    <input type="text" asp-for="arsubItem1" />
+                    <span asp-validation-for="arsubItem1" class="text-danger"></span>
+                </div>
+                @*........................*@   
+                <div class="col-12 col-md-6">
+                    <label asp-for="enarsubItem1"></label>
+                    <input type="text" asp-for="enarsubItem1" />
+                    <span asp-validation-for="enarsubItem1" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arsubItem2"></label>
+                    <input type="text" asp-for="arsubItem2" a />
+                    <span asp-validation-for="arsubItem2" class="text-danger"></span>
+                </div>
+                @*........................*@ 
+                <div class="col-12 col-md-6">
+                    <label asp-for="ensubItem2"></label>
+                    <input type="text" asp-for="ensubItem2" a />
+                    <span asp-validation-for="ensubItem2" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="arsubItem3"></label>
+                    <input type="text" asp-for="arsubItem3" />
+                    <span asp-validation-for="arsubItem3" class="text-danger"></span>
+                </div> 
+                @*................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="ensubItem3"></label>
+                    <input type="text" asp-for="ensubItem3" />
+                    <span asp-validation-for="ensubItem3" class="text-danger"></span>
+                </div>
+               
+              
+            
+
+                @*...........*@
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="Admin" asp-controller="SubMenu" asp-action="Index">Back</a>
+                    <button class="edit" type="submit">submit</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

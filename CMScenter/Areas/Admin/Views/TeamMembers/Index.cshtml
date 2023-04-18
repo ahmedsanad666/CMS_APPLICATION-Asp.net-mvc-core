@@ -1,0 +1,103 @@
+﻿@model List<CMScenter.Views.Models.TeamMember>
+
+    @{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    ViewData["Title"] = "Team Members";
+    }
+
+    @*control_page TeamManage*@
+<section class="CategoryPage min-vh-100 ">
+    <partial name="_AdminNav" />
+
+
+    @if (culture == "en")
+    {
+
+        <h1 class="text-center py-5  ">Team Members</h1>
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 "> اعضاء الفريق</h1>
+    }
+
+
+    <div class="add_new_post container ">
+        @if(culture == "en")
+        {
+
+        <a asp-ara="Admin" asp-controller="TeamMembers" asp-action="Create">Add New <i class="bi bi-plus-circle ms-3"></i></a>
+        }
+        else
+        {
+        <a asp-ara="Admin" asp-controller="TeamMembers" asp-action="Create">اضافة <i class="bi bi-plus-circle ms-3"></i></a>
+            
+        }
+        </div>
+    <table class="table table-striped table-dark container ">
+        <thead>
+            <tr>
+               
+                <th scope="col">FullName</th>
+                <th scope="col">Position</th>
+                <th scope="col">Telefon</th>
+                <th scope="col">Social Media</th>
+                <th scope="col">Controllers</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var el in Model)
+            {
+                
+                @if(culture == "en")
+                {
+                     <tr>
+               
+                <td>@el.enName</td>
+                <td>@el.enPosition</td> 
+                <td>@el.TelefonNum</td> 
+                <td>
+                    <div class="userSocialMedia d-flex flex-column flex-md-row justify-content-evenly g-3">
+                            <a href="@el.FaceBook"><i class="bi bi-facebook"></i></a>
+                            <a href="@el.Twitter">
+                                <i class="bi bi-twitter"></i></a>
+                                <a href="@el.Instagram  "><i class="bi bi-instagram"></i></a>
+                    </div>
+                    </td>
+                    <td class="d-flex flex-column flex-md-row gap-2">
+                        <a class="btn btn-success " asp-area="Admin" asp-controller="TeamMembers" asp-action="Edit" asp-route-id="@el.Id">Edit</a>
+                        <a class="btn btn-danger " asp-area="Admin" asp-controller="TeamMembers" asp-action="delete" asp-route-id="@el.Id" >Delete</a>
+                    </td>
+
+            </tr>
+                }
+                else
+                {
+                    <tr>
+
+                        <td>@el.arName</td>
+                        <td>@el.arPosition</td>
+                        <td>@el.TelefonNum</td>
+                        <td>
+                            <div class="userSocialMedia d-flex flex-column flex-md-row justify-content-evenly g-3">
+                                <a href="@el.FaceBook"><i class="bi bi-facebook"></i></a>
+                                <a href="@el.Twitter">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                                <a href="@el.Instagram  "><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </td>
+                        <td class="d-flex flex-column flex-md-row gap-2">
+                            <a class="btn btn-success " asp-area="Admin" asp-controller="TeamMembers" asp-action="Edit" asp-route-id="@el.Id">تعديل</a>
+                            <a class="btn btn-danger " asp-area="Admin" asp-controller="TeamMembers" asp-action="delete" asp-route-id="@el.Id">حذف</a>
+                        </td>
+
+                    </tr>
+                }
+           
+            }
+ 
+        </tbody>
+    </table>
+    </section>

@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@*@inject IOptions<RequestLocalizationOptions> LocalizationOptions*@
+
+   @inject Microsoft.Extensions.Options.IOptions<Microsoft.AspNetCore.Builder.RequestLocalizationOptions> locOptions
+@{
+    //var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var requestCulture = Context.Features.Get<Microsoft.AspNetCore.Localization.IRequestCultureFeature>();
+
+    //var cultureItems = LocalizationOptions.Value.SupportedUICultures
+    //    .Select(c => new SelectListItem { Value = c.Name, Text = c.Name })
+    //    .ToList();
+
+    var cultureItems = locOptions.Value.SupportedCultures.Select(x => new SelectListItem { Value = x.Name, Text = x.Name }).ToList();
+
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path)
+        ? "~/"
+        : $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
+}
+
+<div>
+    <form asp-area="PublicHTML" asp-controller="Home" asp-action="SetCulture" asp-route-returnUrl="@returnUrl"
+          class="form-horizontal nav-link text-dark">
+        <select class="culture" name="culture"
+                onchange="this.form.submit();"
+                asp-for="@requestCulture.RequestCulture.UICulture.Name"
+                asp-items="cultureItems">
+        </select>
+    </form>
+</div>

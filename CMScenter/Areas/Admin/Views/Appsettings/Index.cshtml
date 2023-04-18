@@ -1,0 +1,130 @@
+﻿
+@model CMScenter.Views.Models.AppSittings
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    ViewData["Title"] = "AppSettings";
+}
+
+<section class="control_page flex-column ">
+    <partial name="_AdminNav"/>
+    @if (culture == "en")
+    {
+        <h1 class="text-center my-5 "> App Settings</h1>
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 "> اعدادات الموقع</h1>
+    }
+   
+
+   <div class="settingsData mt-3"> 
+   <div class="row g-3">
+   
+       <div class="col-12 col-md-6 ">
+           <label asp-for="@Model.Logo"></label>
+          <img src="@Model.Logo" />
+       </div>
+       @*........................*@  
+       
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.arName"></label>
+           <input disabled value="@Model.arName" />   
+           <span asp-validation-for="arName" class="text-danger"></span>
+       </div>
+       @*........................*@ 
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.enName"></label>
+           <input disabled value="@Model.enName" />   
+           <span asp-validation-for="enName" class="text-danger"></span>
+       </div>
+       @*........................*@ 
+       <div class="col-12 col-md-6">    
+           <label asp-for="@Model.AboutAs_video"></label>
+           <input disabled value="@Model.AboutAs_video" />
+       </div>
+       @*........................*@  
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.arAboutUs"></label>
+           <input disabled value="@Model.arAboutUs" />
+                <span asp-validation-for="arAboutUs" class="text-danger"></span>
+       </div>
+       @*........................*@  
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.enAboutUs"></label>
+           <input disabled value="@Model.enAboutUs" />
+                <span asp-validation-for="enAboutUs" class="text-danger"></span>
+       </div>
+       @*........................*@  
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.arVision"></label>
+           <input disabled value="@Model.arVision" />
+            <span asp-validation-for="arVision" class="text-danger"></span>
+       </div>
+       @*........................*@   
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.enVision"></label>
+                <input disabled value="@Model.enVision" />
+                <span asp-validation-for="enVision" class="text-danger"></span>
+       </div>
+       @*........................*@  
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.LaunchDate"></label>
+                <input value="@Model.LaunchDate" disabled />
+                       
+       </div>
+       @*........................*@  
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.FaceBook"></label>
+           <input disabled value="@Model.FaceBook" />
+       </div>
+       @*........................*@ 
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.Twitter"></label>
+           <input disabled value="@Model.Twitter" />
+       </div>
+       @*........................*@
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.Youtube"></label>
+           <input disabled value="@Model.Youtube" />
+       </div>
+       @*........................*@ 
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.AdminEmail"></label>
+           <input disabled value="@Model.AdminEmail" />
+       </div>
+       @*........................*@ 
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.TelefonNum"></label>
+           <input disabled value="@Model.TelefonNum" />
+       </div>
+       @*........................*@   
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.Committees"></label>
+           <input disabled value="@Model.Committees" />
+       </div>
+       @*........................*@  
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.TeamMembers"></label>
+           <input disabled value="@Model.TeamMembers" />
+       </div>
+       @*........................*@   
+      <div class="col-12 col-md-6">
+           <label asp-for="@Model.Beneficiaries"></label>
+           <input disabled value="@Model.Beneficiaries" />
+       </div>
+       @*........................*@  
+       <div class="col-12 col-md-6">
+           <label asp-for="@Model.ScientificActivities"></label>
+           <input disabled value="@Model.ScientificActivities" />
+       </div>
+       @*........................*@
+       <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+           <a class="back" asp-area="Admin" asp-controller="Admin" asp-action="Index">Back</a>
+           <a class="edit" asp-area="Admin" asp-controller="Appsettings" asp-action="Edit" >Edit</a>
+
+       </div>
+   </div>    
+   </div>
+</section>

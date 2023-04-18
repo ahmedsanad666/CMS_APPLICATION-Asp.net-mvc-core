@@ -1,0 +1,94 @@
+﻿@model List<CMScenter.Views.Models.SubmenuBox>
+@{
+    ViewData["Title"] = "SubMenu";
+    var culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+
+}
+
+
+
+<section class="control_page submenuSec">
+       <partial name="_AdminNav" />
+
+    @if (culture == "en")
+    {
+
+    <h1 class="text-center">SubMenu control</h1>
+     
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 "> القائمة الفرعية</h1>
+
+    }
+
+   
+    <table class="table table-striped table-dark container ">
+
+
+        <thead>
+            <tr>
+
+                @if(culture == "en")
+                {
+                    <th scope="col"> Name</th>
+                    <th scope="col">item1</th>
+                    <th scope="col">item2</th>
+                    <th scope="col">item3</th>
+                    <th scope="col">Controllers</th>
+                }else{
+                <th scope="col"> الاسم </th>
+                <th scope="col">العنصر 1</th>
+                <th scope="col">العنصر 2</th>
+                <th scope="col">العنصر 3</th>
+                <th scope="col">عناصر التحكم</th>  
+                }
+
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var el in Model)
+            {
+
+                @if(culture == "en")
+                {
+                    
+                <tr>
+
+
+                    <td>@el.enName</td>
+                    <td>@el.enarsubItem1</td>
+                    <td>@el.ensubItem2</td>
+                    <td>@el.ensubItem3</td>
+
+                    <td class="d-flex flex-column flex-md-row gap-2">
+                        <a class="btn btn-success " asp-area="Admin" asp-controller="SubMenu" asp-action="Edit" asp-route-id="@el.Id">Edit</a>
+                        
+                    </td>
+
+                    </tr>
+                }else
+                {
+                     <tr>
+
+
+                    <td>@el.arName</td>
+                    <td>@el.arsubItem1</td>
+                    <td>@el.arsubItem2</td>
+                    <td>@el.arsubItem3</td>
+
+                    <td class="d-flex flex-column flex-md-row gap-2">
+                        <a class="btn btn-success " asp-area="Admin" asp-controller="SubMenu" asp-action="Edit" asp-route-id="@el.Id">تعديل</a>
+                        
+                    </td>
+
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</section>

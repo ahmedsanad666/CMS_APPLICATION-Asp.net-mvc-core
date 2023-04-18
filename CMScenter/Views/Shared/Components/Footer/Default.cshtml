@@ -1,0 +1,147 @@
+﻿
+@model CMScenter.Views.Models.ViewModel
+@{
+    var culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+}
+    
+<div class="container">
+    <div class="footerNav">
+        <div class="row">
+            <div class="col-md-3 d-md-block d-none ">
+                <img src="@Model.appSettings.Logo">
+
+            </div>
+            <div class="col-6 d-md-block d-none">
+                <div class="footer_item">
+                    @if (culture == "en")
+                    {
+
+                        <ul class="d-md-flex d-none justify-content-center align-items-center">
+                            <li>
+                                <a href="#">
+
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+
+                                    media Resources
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+
+                                    Contanct
+                                </a>
+                            </li>
+                        </ul>
+                    }
+                    else
+                    {
+                        <ul class="d-md-flex d-none justify-content-center align-items-center">
+                            <li>
+                                <a href="#">
+
+                                    حول الموقع
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+
+                                    وسائل الاعلام
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+
+                                    تواصل معنا
+                                </a>
+                            </li>
+                        </ul>
+                    }
+                </div>
+            </div>
+            <div class="col-md-3  col-8 m-auto">
+                <div class="footer-social">
+
+                    <ul class="d-flex justify-content-evenly align-items-center gap-2">
+                        <li>
+                            <a href="@Model.appSettings.FaceBook">
+
+                            <i class="bi bi-facebook"></i>
+                            </a>
+                         </li>
+                        <li>
+                            <a href="@Model.appSettings.Youtube">
+                            <i class="bi bi-youtube"></i>
+                        </a>    
+                        </li>
+                        <li>
+                            <a href="@Model.appSettings.Twitter">
+                            
+                                <i class="bi bi-twitter"></i>
+                           
+                              </a>
+                                </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+       <div class="container text-center m-auto contact ">
+           @if(culture == "en"){
+            <h1 class="text-center py-4">Sign Up and Connect</h1>
+           <form class="col-xl-4  col-8 m-auto d-flex flex-md-row flex-column gap-4">
+
+               <input type="email" placeholder="Your Email"  />
+               <button type="submit">Subscribe</button>
+                </form>
+           } else{
+                <h1 class="text-center py-4">سجل معنا</h1>
+                <form class="col-xl-4  col-8 m-auto d-flex flex-md-row flex-column gap-4">
+
+                    <input type="email" placeholder="البريد الالكتروني" />
+                    <button type="submit">تواصل</button>
+                </form>
+                }
+         </div>
+        <div class="text-center d-md-none logo-down my-4">
+            <img src="@Model.appSettings.Logo">
+
+        </div>
+
+        <div class=" Rights_reserved py-4">
+       <div class="container d-flex flex-md-row flex-column justify-content-between gap-4">
+                @if(culture == "en")
+                {
+                    <a href="#">
+                        Legal Notice & Disclosure
+                    </a>
+                    <strong>
+                        MediaCoverage
+                    </strong>
+                    <span>
+                        © 2023 Arid. All Rights reserved.
+                    </span>
+                }
+                else
+                {
+                    <a href="#">
+                        الإخطار القانوني والإفصاح
+                    </a>
+                    <strong>
+                        تغطية إعلامية
+                    </strong>
+                    <span>
+                        © 2023 اريد. كل الحقوق محفوظة
+                    </span>
+                    
+                }
+              
+       </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,451 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer;
+@model CMScenter.Views.Models.ViewModel;
+@{
+    ViewData["Title"] = "Home Page";
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+}
+
+@*
+    //start slider
+*@
+<section>
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+       
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                @*<img src="~/images/Slider/slider1.jpeg" class="d-block w-100" alt="..."> *@
+                <img src="@Model.appSettings.SliderImage1" class="d-block w-100" alt="...">
+            </div>
+          
+            <div class="carousel-item">
+                @*<img src="~/images/Slider/slider2.jpeg" class="d-block w-100" alt="...">*@
+                 <img src="@Model.appSettings.SliderImage2" class="d-block w-100" alt="...">
+            </div><div class="carousel-item">
+                @*<img src="~/images/Slider/slider3.png" class="d-block w-100" alt="...">*@
+                <img src="@Model.appSettings.SliderImage3" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+@*
+    //end slider
+*@
+
+<section class="aboutUs">
+    
+    @*comming soon*@
+
+    <div class="comming-soon d-none d-md-block">
+    
+    <div class="comming-soon-out ">
+        <div class="row">
+                @foreach(var el in Model.subMenu)
+                {
+                    @if(culture == "en")
+                    {
+                        <div class="col-md-3 col">
+                            <h6>@el.enName</h6>
+                            <ul>
+                                <li>@el.enarsubItem1</li>
+                                <li>@el.ensubItem2</li>
+                                <li>@el.ensubItem3</li>
+
+
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-md-3 col">
+                            <h5>@el.arName</h5>
+                            <ul>
+                                <li>@el.arsubItem1</li>
+                                <li>@el.arsubItem2</li>
+                                <li>@el.arsubItem3</li>
+
+                            </ul>
+                        </div>
+                    }
+                }
+            
+        
+        </div>
+    </div>
+    </div>
+
+    @*about us and video*@
+
+   <div class="aboutUs_vedio d-flex flex-md-row flex-column ">
+        <div class="text-center aboutUsP  w-100">
+           @if(culture == "ar"){
+               
+           <h2>حول موقعنا </h2>
+            <p>@Model.appSettings.arAboutUs</p>
+           }else{
+
+           <h2>About Us</h2>
+            <p>@Model.appSettings.enAboutUs</p>
+           }
+           
+       </div>
+       <div  class="video w-100">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YlQcXFSYit8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+         
+       </div>
+       
+   </div>
+    
+</section>
+
+
+@*
+    news and posts section
+*@
+
+
+
+<section class="posts py-3">
+    @if(culture == "en"){
+
+        <h1 class="container post_header"> <i class="bi bi-calendar2-event ms-3"></i> Posts & Events</h1>
+    }else{
+
+            <h2 class="container post_header"> <i class="bi bi-calendar2-event me-3"></i> مقالات و احداث </h2>
+
+    }
+    
+    
+    <div class="owl-carousel owl-theme">
+        
+        @foreach(var el in Model.posts){
+
+            @if(culture == "en")
+            {
+
+                <div class="item">
+                    <div class="card">
+                        <img src="@el.PostImage" />
+                        <div class="text-container">
+                            <div class="d-flex align-items-start flex-column">
+
+                                <span class="date"> <i class="bi bi-clock ms-2"></i>@el.postDate.ToLongDateString()</span>
+                                <h3>@el.enTitle</h3>
+                                <a href="#" class="mt-3 readMore">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="item">
+                    <div class="card">
+                        <img src="@el.PostImage" />
+                        <div class="text-container">
+                            <div class="d-flex align-items-start flex-column">
+
+                                <span class="date"> <i class="bi bi-clock ms-2"></i>@el.postDate.ToLongDateString() </span>
+                                <h3>@el.arTitle</h3>
+
+                                <a href="#" class="mt-3 readMore">المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        }
+       
+    </div>
+</section>
+
+@*
+    out vision section
+*@
+@if(culture == "en")
+{
+
+    <h2 class="my-4 post_header container"> <i class="bi bi-pc-display-horizontal ms-3"></i> Our Statistics</h2>
+}
+else
+{
+    <h2 class="my-4 post_header container"> <i class="bi bi-pc-display-horizontal ms-3"></i> الاحصائيات </h2>
+
+
+}
+<section class="Statistics py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class=" col-lg-3 col-sm-6  col-12">
+                <div class="d-flex flex-column justify-content-between">
+                    @if(culture == "en"){
+
+                        <h3>Committees</h3>
+                    }
+                    else
+                    {
+                        <h3>عدد اللجان</h3>
+                        
+                    }
+                    <h2 class="riseNum Committees">@Model.appSettings.Committees</h2>
+                <span><i class="bi bi-microsoft-teams"></i></span>
+                </div>
+            </div>
+            @*...............*@
+            
+            <div class=" col-lg-3 col-sm-6  col-12">
+                <div class="d-flex flex-column justify-content-between">
+                    @if (culture == "en")
+                    {
+
+                        <h3>Team Members</h3>
+                    }
+                    else
+                    {
+                        <h3>عدد الفريق </h3>
+
+                    }
+                  
+                <h2 class="riseNum teamNumber">@ViewData["teamNumber"]</h2>
+                <span><i class="bi bi-microsoft-teams"></i></span>
+                </div>
+            </div>
+            @*...............*@
+            <div class=" col-lg-3 col-sm-6  col-12">
+                <div class="d-flex flex-column justify-content-between">
+                     @if (culture == "en")
+                    {
+
+                        
+                    <h3>Beneficiaries</h3>
+                    }
+                    else
+                    {
+                        <h3>عدد الاعضاء </h3>
+
+                    }
+                    <h2 class="riseNum benef">@Model.appSettings.Beneficiaries</h2>
+                <span><i class="bi bi-microsoft-teams"></i></span>
+                </div>
+            </div>
+            @*...............*@<div class=" col-lg-3 col-sm-6  col-12">
+                <div class="d-flex flex-column justify-content-between">
+                    @if (culture == "en")
+                    {
+
+                    <h3 >Scientific Activities</h3>
+                        
+                    }
+                    else
+                    {
+                        <h3>الفعاليات العلمية </h3>
+
+                    }
+                    <h2 class="riseNum Activities">@Model.appSettings.ScientificActivities</h2>
+                <span><i class="bi bi-microsoft-teams"></i></span>
+                </div>
+            </div>
+            @*...............*@
+        </div>
+    </div>
+   
+</section>
+
+@*
+    our Services and courses
+*@
+
+<section class="ourServices my-4">
+    @if (culture == "en")
+    {
+
+       
+    <h2 class="my-4 post_header container "> <i class="bi bi-book-half ms-3"></i> Our Services & Courses</h2>
+    }
+    else
+    {
+    <h2 class="my-4 post_header container "> <i class="bi bi-book-half ms-3"></i> دورات و خدمات</h2>
+
+    }
+    <div class="container mt-3">
+        <div class="row g-4 text-center ">
+            @foreach(var el in Model.services)
+            {
+                
+
+                @if(culture == "en")
+                {
+                    
+             <div class="col-12 col-lg-3 col-md-6">
+                <div class="courseCard">
+                    <div clss="courseImg">
+                        <img  src="@el.Image"/>
+                    </div>
+                    <div class="course-info d-flex flex-column justify-content-between">
+                    <h5>@el.enName</h5>
+                    <h6>By: @el.ConstructorName</h6>
+                    <hr />
+                    <div class="course-price">
+                        <h5> @el.courseCategory.enName</h5>
+                      
+                    </div>
+
+                    </div>
+                    
+                    <a href="@el.CourseLink">More Details <i class="bi bi-arrow-right-circle ms-3"></i></a>
+                </div>
+                    </div>
+                }
+                else
+                {
+
+                    <div class="col-12 col-lg-3 col-md-6">
+                        <div class="courseCard">
+                            <div clss="courseImg">
+                                <img src="@el.Image" />
+                            </div>
+                            <div class="course-info d-flex flex-column justify-content-between">
+                                <h5>@el.arName</h5>
+                                <h6>By: @el.ConstructorName</h6>
+                                <hr />
+                                <div class="course-price">
+                                    <h5> @el.courseCategory.arName</h5>
+
+                                </div>
+
+                            </div>
+
+                            <a href="@el.CourseLink">المزيد <i class="bi bi-arrow-right-circle ms-3"></i></a>
+                        </div>
+                    </div>
+                }
+          
+                }
+          
+        </div>
+            @*l.................*@ 
+              
+            
+    </div>
+    
+</section>
+
+@*
+   start our team members serction 
+*@
+
+
+<section class="ourTeam ">
+    @if(culture == "en")
+    {
+
+        <h1 class="container post_header"> <i class="bi bi-calendar2-event me-3"></i>Team Members</h1>
+    }
+    else
+    {
+        <h1 class="container post_header"> <i class="bi bi-calendar2-event me-3"></i>اعضاء الفريق</h1>
+    }
+            
+        <div class="owl-carousel owl-theme">
+        @foreach( var el in Model.TeamMember)
+        {
+            
+            @if(culture == "en")
+            {
+                
+
+            <div class="item">
+
+                <div class="card">
+                    <img src="@el.Image" />
+                    <div class="text-container">
+                        <div class="d-flex align-items-start flex-column">
+
+                           
+                            <h3>@el.enName</h3>
+                            <a href="#" class="mt-3 readMore">More Details</a>
+                            <ul class="py-3 d-flex justify-content-between align-items-center">
+                                <li>
+                                    <a href="@el.FaceBook">
+                                    <i class="bi bi-facebook"></i>
+                                    </a>
+                                </li> <li>
+                                    <a href="@el.Twitter">
+                                    <i class="bi bi-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@el.Youtube">
+                                    <i class="bi bi-youtube"></i>
+                                    </a>
+                                </li><li>
+                                    <a href="@el.Instagram">
+                                    <i class="bi bi-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            }
+            else
+            {
+
+                <div class="item">
+
+                    <div class="card">
+                        <img src="@el.Image" />
+                        <div class="text-container">
+                            <div class="d-flex align-items-start flex-column">
+
+
+                                <h3>@el.arName</h3>
+                                <a href="#" class="mt-3 readMore">المزيد</a>
+                                <ul class="py-3 d-flex justify-content-between align-items-center">
+                                    <li>
+                                        <a href="@el.FaceBook">
+                                            <i class="bi bi-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@el.Twitter">
+                                            <i class="bi bi-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@el.Youtube">
+                                            <i class="bi bi-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@el.Instagram">
+                                            <i class="bi bi-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+</section>
+@*
+    end our team members section
+*@
+
+
+
+

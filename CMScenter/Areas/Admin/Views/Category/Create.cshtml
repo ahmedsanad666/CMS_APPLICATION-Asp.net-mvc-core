@@ -1,0 +1,71 @@
+﻿
+@model CMScenter.Views.Models.CourseCategory;
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    ViewData["Title"] = "Create Category";
+}
+
+
+
+
+<section class="control_page Add_member flex-column min-vh-100 ">
+    <partial name="_AdminNav" />
+
+    @if (culture == "en")
+    {
+
+        <h1 class="text-center my-5 "> Create Category</h1>
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 "> انشاء قسم</h1>
+
+    }
+
+  
+
+    <div class="settingsData  mt-3">
+        <form method="post" asp-action="Create">
+            <input asp-for="Id" hidden />
+           
+
+            <div class="row gap-1">
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="arName"></label>
+                    <input type="text" asp-for="arName" />
+                    <span asp-validation-for="arName" class="text-danger"></span>
+                </div>
+                @*........................*@    
+                <div class="col-12 col-md-6">
+                    <label asp-for="enName  "></label>
+                    <input type="text" asp-for="enName" />
+                    <span asp-validation-for="enName" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="arDescription"></label>
+                    <textarea asp-for="arDescription" rows="3"></textarea>
+                    <span asp-validation-for="arDescription" class="text-danger"></span>
+
+                </div> 
+                @*..............*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enDescription"></label>
+                    <textarea asp-for="enDescription" rows="3"></textarea>
+                    <span asp-validation-for="enDescription" class="text-danger"></span>
+
+                </div>
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="Admin" asp-controller="Category" asp-action="Index">Back</a>
+                    <button class="edit" type="submit">submit</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

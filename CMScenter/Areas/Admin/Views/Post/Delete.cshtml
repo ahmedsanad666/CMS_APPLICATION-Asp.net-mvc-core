@@ -1,0 +1,84 @@
+﻿@model CMScenter.Views.Models.Posts;
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+
+    ViewData["Title"] = "Delete Post";
+}
+
+
+
+<section class="control_page flex-column ">
+    <partial name="_AdminNav" />
+    
+
+    @if (culture == "en")
+    {
+
+
+        <h1 class="text-center my-5 ">
+            Delete Post
+        </h1>
+    }
+    else
+    {
+        <h1 class="text-center my-5 ">  حذف مقال</h1>
+
+    }
+    <div class="settingsData mt-3">
+        <form method="post" asp-action="Delete" enctype="multipart/form-data">
+
+            <input asp-for="Id" hidden />
+            <input asp-for="PostImage" hidden />
+
+            <div class="row g-3">
+
+
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arTitle"></label>
+                    <input disabled type="text" asp-for="arTitle" />
+                    <span asp-validation-for="arTitle" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enTitle"></label>
+                    <input disabled type="text" asp-for="enTitle" />
+                    <span asp-validation-for="enTitle" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arDes"></label>
+                    <textarea disabled asp-for="arDes" rows="3"></textarea>
+                    <span asp-validation-for="arDes" class="text-danger"></span>
+
+                </div>
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enDes"></label>
+                    <textarea disabled  asp-for="enDes" rows="3"></textarea>
+                    <span asp-validation-for="enDes" class="text-danger"></span>
+
+                </div>
+
+                @*........................*@
+
+
+
+
+          
+
+
+
+                @*........................*@
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="Admin" asp-controller="Post" asp-action="Index">Back</a>
+                    <button class="edit btn btn-danger" type="submit">Delete</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

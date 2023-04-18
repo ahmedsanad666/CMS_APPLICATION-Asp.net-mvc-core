@@ -1,0 +1,179 @@
+﻿@model CMScenter.Views.Models.AppSittings;
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    ViewData["Title"] = "Edit Settings";
+}
+
+
+
+<section class="control_page flex-column ">
+    <partial name="_AdminNav" />
+
+    @if(culture == "en")
+    {
+        <h1 class="text-center my-5 "> App Settings</h1>
+        
+    }else{
+        <h1 class="text-center my-5 "> اعدادات الموقع</h1>
+    }
+    
+
+   <div class="settingsData mt-3">
+       <h6 class="text-center">please upload all the images files again</h6>
+        <form method="post" asp-action="Edit" enctype="multipart/form-data">
+      
+            <input asp-for="Id" hidden />
+            <input asp-for="Logo" hidden />
+            <input asp-for="SliderImage1" hidden />
+            <input asp-for="SliderImage2" hidden />
+            <input asp-for="SliderImage3" hidden />
+         
+   <div class="row g-3">
+        
+       
+       <div class="col-12 col-md-6 ">
+           <label asp-for="Logo" ></label>
+                    <input type="file" asp-for="Logo" value="@Model.Logo" name="files" />
+                 
+       </div>
+     
+       @*........................*@ 
+       <div class="col-12 col-md-6 ">
+           <label asp-for="SliderImage1"></label>
+                    <input type="file" asp-for="SliderImage1" name="files" />
+                    
+       </div>
+     
+       @*........................*@ 
+       <div class="col-12 col-md-6 ">
+           <label asp-for="SliderImage2"></label>
+                    <input type="file" asp-for="SliderImage2" name="files" />
+                  
+       </div>
+     
+       @*........................*@
+       <div class="col-12 col-md-6 ">
+           <label asp-for="SliderImage3"></label>
+                    <input type="file" asp-for="SliderImage3" name="files" />
+                    
+       </div>
+     
+       @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arName"></label>
+                    <input  asp-for="arName" />
+                    <span asp-validation-for="arName" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enName"></label>
+                    <input asp-for="enName"/>
+                    <span asp-validation-for="enName" class="text-danger"></span>
+                </div>
+                @*........................*@
+               
+                <div class="col-12 col-md-6">
+                    <label asp-for="arAboutUs"></label>
+                    <input   asp-for="arAboutUs" />
+                    <span asp-validation-for="arAboutUs" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enAboutUs"></label>
+                    <input  asp-for="enAboutUs"/>
+                    <span asp-validation-for="enAboutUs" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="arVision"></label>
+                    <input  asp-for="arVision" />
+                    <span asp-validation-for="arVision" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="enVision"></label>
+                    <input  asp-for="enVision" />
+                    <span asp-validation-for="enVision" class="text-danger"></span>
+                </div>
+                @*........................*@
+                @*........................*@
+               
+       <div class="col-12 col-md-6">
+           <label asp-for="LaunchDate"></label>
+           <input  type="datetime" asp-for="LaunchDate" />
+                    <span asp-validation-for="LaunchDate" class="text-danger"></span>
+       </div>
+       @*........................*@
+       
+                <div class="col-12 col-md-6">
+                    <label asp-for="AboutAs_video"></label>
+                    <input type="text" asp-for="AboutAs_video" />
+                    <span asp-validation-for="AboutAs_video" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+
+                <div class="col-12 col-md-6">
+           <label asp-for="FaceBook"></label>
+           <input type="text" asp-for="FaceBook" />
+                    <span asp-validation-for="FaceBook" class="text-danger"></span>
+       </div>
+       @*........................*@ 
+       <div class="col-12 col-md-6">
+           <label asp-for="Twitter"></label>
+           <input type="text" asp-for="Twitter" />
+                    <span asp-validation-for="Twitter" class="text-danger"></span>
+       </div>
+       @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="Youtube"></label>
+                    <input type="text" asp-for="Youtube" />
+                    <span asp-validation-for="Youtube" class="text-danger"></span>
+                </div>
+       @*........................*@ 
+       <div class="col-12 col-md-6">
+           <label asp-for="AdminEmail"></label>
+           <input type="email" asp-for="AdminEmail" />
+                    <span asp-validation-for="Youtube" class="text-danger"></span>
+       </div>
+       @*........................*@ 
+       <div class="col-12 col-md-6">
+           <label asp-for="TelefonNum"></label>
+           <input asp-for="TelefonNum"/>
+                    <span asp-validation-for="TelefonNum" class="text-danger"></span>
+       </div>
+       @*........................*@   
+       <div class="col-12 col-md-6">
+           <label asp-for="Committees"></label>
+           <input asp-for="Committees" />
+                    <span asp-validation-for="Committees" class="text-danger"></span>
+       </div>
+       @*........................*@  
+       <div class="col-12 col-md-6">
+           <label asp-for="TeamMembers"></label>
+           <input asp-for="TeamMembers" />
+                    <span asp-validation-for="TeamMembers" class="text-danger"></span>
+       </div>
+       @*........................*@   
+      <div class="col-12 col-md-6">
+           <label asp-for="Beneficiaries"></label>
+           <input asp-for="Beneficiaries" />
+                    <span asp-validation-for="Beneficiaries" class="text-danger"></span>
+       </div>
+       @*........................*@  
+       <div class="col-12 col-md-6">
+           <label asp-for="ScientificActivities"></label>
+           <input asp-for="ScientificActivities" />
+                    <span asp-validation-for="ScientificActivities" class="text-danger"></span>
+       </div>
+       @*........................*@
+       <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+           <a class="back" asp-area="Admin" asp-controller="Admin" asp-action="Index">Back</a>
+         <button class="edit" type="submit">submit</button>
+
+       </div>
+   </div>    
+       </form>
+   </div>
+</section>
