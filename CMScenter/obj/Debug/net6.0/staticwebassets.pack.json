@@ -1,411 +1,583 @@
 {
   "Files": [
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CMScenter.bundle.scp.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CMScenter.bundle.scp.css",
       "PackagePath": "staticwebassets\\CMScenter.bundle.scp.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\css\\blobz.min.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\css\\NourStyle.css",
+      "PackagePath": "staticwebassets\\css\\NourStyle.css"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\css\\blobz.min.css",
       "PackagePath": "staticwebassets\\css\\blobz.min.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\css\\site.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\favicon.ico",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\04dfc782-1f50-4b38-992a-f569f460efab.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\04dfc782-1f50-4b38-992a-f569f460efab.png",
       "PackagePath": "staticwebassets\\images\\Slider\\04dfc782-1f50-4b38-992a-f569f460efab.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\0b2ff91b-b7f8-4121-8e38-7ecbea658b84.jpeg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\0b2ff91b-b7f8-4121-8e38-7ecbea658b84.jpeg",
       "PackagePath": "staticwebassets\\images\\Slider\\0b2ff91b-b7f8-4121-8e38-7ecbea658b84.jpeg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\1f09a5bc-02f5-4046-8224-764052d01263.jpeg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\1f09a5bc-02f5-4046-8224-764052d01263.jpeg",
       "PackagePath": "staticwebassets\\images\\Slider\\1f09a5bc-02f5-4046-8224-764052d01263.jpeg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\4beb2744-0aff-42d2-910e-2380634b98b6.jpg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\39864dae-30b9-448f-85b7-313a02ef8e9a.jpeg",
+      "PackagePath": "staticwebassets\\images\\Slider\\39864dae-30b9-448f-85b7-313a02ef8e9a.jpeg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\4beb2744-0aff-42d2-910e-2380634b98b6.jpg",
       "PackagePath": "staticwebassets\\images\\Slider\\4beb2744-0aff-42d2-910e-2380634b98b6.jpg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\77746212-b033-4e6d-b165-ee48db9c862d.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\752590ba-784b-4618-a408-2067bb441d3b.gif",
+      "PackagePath": "staticwebassets\\images\\Slider\\752590ba-784b-4618-a408-2067bb441d3b.gif"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\77746212-b033-4e6d-b165-ee48db9c862d.png",
       "PackagePath": "staticwebassets\\images\\Slider\\77746212-b033-4e6d-b165-ee48db9c862d.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\9a97d448-2b0d-4b5e-aedc-9c06a94d7afb.jpeg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\7a918ad5-9deb-4f2d-ab6f-2e0bf6e149a9.jpeg",
+      "PackagePath": "staticwebassets\\images\\Slider\\7a918ad5-9deb-4f2d-ab6f-2e0bf6e149a9.jpeg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\9a97d448-2b0d-4b5e-aedc-9c06a94d7afb.jpeg",
       "PackagePath": "staticwebassets\\images\\Slider\\9a97d448-2b0d-4b5e-aedc-9c06a94d7afb.jpeg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\ea34fe16-7198-4b2a-a4bf-58d7af4ee69f.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\Slider\\ea34fe16-7198-4b2a-a4bf-58d7af4ee69f.png",
       "PackagePath": "staticwebassets\\images\\Slider\\ea34fe16-7198-4b2a-a4bf-58d7af4ee69f.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\TeamMembers\\0e00947e-96cf-4d78-91df-5b69ba8fe369.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\TeamMembers\\0e00947e-96cf-4d78-91df-5b69ba8fe369.png",
       "PackagePath": "staticwebassets\\images\\TeamMembers\\0e00947e-96cf-4d78-91df-5b69ba8fe369.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\TeamMembers\\3b500f3a-2fab-45b9-bb3e-360258d7e111.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\TeamMembers\\3b500f3a-2fab-45b9-bb3e-360258d7e111.png",
       "PackagePath": "staticwebassets\\images\\TeamMembers\\3b500f3a-2fab-45b9-bb3e-360258d7e111.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\TeamMembers\\605998be-cf4a-4cc7-8b3e-b86399875a92.png",
-      "PackagePath": "staticwebassets\\images\\TeamMembers\\605998be-cf4a-4cc7-8b3e-b86399875a92.png"
-    },
-    {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\TeamMembers\\e554b79e-b422-4662-82a5-a1ac6d82bd9e.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\TeamMembers\\e554b79e-b422-4662-82a5-a1ac6d82bd9e.png",
       "PackagePath": "staticwebassets\\images\\TeamMembers\\e554b79e-b422-4662-82a5-a1ac6d82bd9e.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\aboutUs.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\00603b4f-532a-476e-89ad-3153801f6d43.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\00603b4f-532a-476e-89ad-3153801f6d43.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\04606dd0-17ea-4fb3-a639-bd62cff75bc0.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\04606dd0-17ea-4fb3-a639-bd62cff75bc0.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\15c8be2c-87ed-4345-b79c-8fbd0c55ad87.png",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\15c8be2c-87ed-4345-b79c-8fbd0c55ad87.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\1d9c620d-5545-4167-919b-00d3e46af337.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\1d9c620d-5545-4167-919b-00d3e46af337.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\1dd96f97-a958-4b4c-bcbb-b5e696437f42.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\1dd96f97-a958-4b4c-bcbb-b5e696437f42.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\2283c671-b2dc-4620-8461-0371bcd7c1f7.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\2283c671-b2dc-4620-8461-0371bcd7c1f7.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\3df79dec-880b-42e4-8f4a-f11be6bf3f16.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\3df79dec-880b-42e4-8f4a-f11be6bf3f16.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\40307a04-cf88-4132-8d83-fce47c3387eb.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\40307a04-cf88-4132-8d83-fce47c3387eb.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\6eb6ac5c-42af-45d4-9572-549bb96c1ee4.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\6eb6ac5c-42af-45d4-9572-549bb96c1ee4.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\73527534-e69b-4b58-b46c-f6162654746c.png",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\73527534-e69b-4b58-b46c-f6162654746c.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\73ef89ee-70f4-4521-b8a0-c8718ec7f002.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\73ef89ee-70f4-4521-b8a0-c8718ec7f002.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\74a57bfa-86ed-4604-b040-210e78ad519c.png",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\74a57bfa-86ed-4604-b040-210e78ad519c.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\7bdf3b28-30a7-4372-b269-82e4e085b812.png",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\7bdf3b28-30a7-4372-b269-82e4e085b812.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\8d30d315-7480-4419-acdd-b319a5720354.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\8d30d315-7480-4419-acdd-b319a5720354.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\947d9d36-1866-495d-ad19-e2155ea8a43a.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\947d9d36-1866-495d-ad19-e2155ea8a43a.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\a2922aca-d14d-4a1c-b3fe-658f8b8c6bd2.png",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\a2922aca-d14d-4a1c-b3fe-658f8b8c6bd2.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\aebcd828-a722-41ea-b8bc-2c25ac338e0c.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\aebcd828-a722-41ea-b8bc-2c25ac338e0c.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\bbb20860-d3d6-4360-ac8b-83a720007348.png",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\bbb20860-d3d6-4360-ac8b-83a720007348.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\c8f7f039-88be-4d93-9b19-6ba64d8a31be.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\c8f7f039-88be-4d93-9b19-6ba64d8a31be.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\cc17413b-cba8-4da1-ac8a-67dfcf255506.png",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\cc17413b-cba8-4da1-ac8a-67dfcf255506.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\cd238ce7-d691-4292-be7c-ecbd17dbdcc8.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\cd238ce7-d691-4292-be7c-ecbd17dbdcc8.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\d3ef50c4-139d-4f56-bba0-3434b34489d2.png",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\d3ef50c4-139d-4f56-bba0-3434b34489d2.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\d52bd8b7-5ccc-494a-a3f5-169646758c1a.jpg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\d52bd8b7-5ccc-494a-a3f5-169646758c1a.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\db2c709e-1958-4da3-87a1-87cfc32d95ef.jpeg",
+      "PackagePath": "staticwebassets\\images\\VideosImages\\db2c709e-1958-4da3-87a1-87cfc32d95ef.jpeg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\aboutUs.png",
       "PackagePath": "staticwebassets\\images\\aboutUs.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\aboutusBavk.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\aboutusBavk.png",
       "PackagePath": "staticwebassets\\images\\aboutusBavk.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\logo.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\contributors\\3d6ab0ae-103c-486a-a9fa-25a53a512a3d.jpg",
+      "PackagePath": "staticwebassets\\images\\contributors\\3d6ab0ae-103c-486a-a9fa-25a53a512a3d.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\contributors\\5435f2fb-2ebd-4ead-9e2b-33a4a3e5e68e.jpg",
+      "PackagePath": "staticwebassets\\images\\contributors\\5435f2fb-2ebd-4ead-9e2b-33a4a3e5e68e.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\contributors\\883cde7f-a4b8-4d0c-b4ad-3c66024d94e6.jpg",
+      "PackagePath": "staticwebassets\\images\\contributors\\883cde7f-a4b8-4d0c-b4ad-3c66024d94e6.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\contributors\\c8da9c32-0159-4d9f-a73a-1ca797ec968f.jpg",
+      "PackagePath": "staticwebassets\\images\\contributors\\c8da9c32-0159-4d9f-a73a-1ca797ec968f.jpg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\logo\\0e27e33a-9b8c-44a1-b77b-18d3550c6b8a.jpg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\logo\\0e27e33a-9b8c-44a1-b77b-18d3550c6b8a.jpg",
       "PackagePath": "staticwebassets\\images\\logo\\0e27e33a-9b8c-44a1-b77b-18d3550c6b8a.jpg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\logo\\99dcbce5-4b34-40bd-9009-d7276a281897.jpeg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\logo\\52c6336d-8fad-4427-9065-a349bc609a81.png",
+      "PackagePath": "staticwebassets\\images\\logo\\52c6336d-8fad-4427-9065-a349bc609a81.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\logo\\99dcbce5-4b34-40bd-9009-d7276a281897.jpeg",
       "PackagePath": "staticwebassets\\images\\logo\\99dcbce5-4b34-40bd-9009-d7276a281897.jpeg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\logo\\a4632c56-2267-457d-a3e0-58d27bfc1ac6.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\logo\\a4632c56-2267-457d-a3e0-58d27bfc1ac6.png",
       "PackagePath": "staticwebassets\\images\\logo\\a4632c56-2267-457d-a3e0-58d27bfc1ac6.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\logo\\dccb36b3-2c88-4ccb-8592-1fbafcb66f07.jpeg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\logo\\dccb36b3-2c88-4ccb-8592-1fbafcb66f07.jpeg",
       "PackagePath": "staticwebassets\\images\\logo\\dccb36b3-2c88-4ccb-8592-1fbafcb66f07.jpeg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\others\\outVision.jpg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\nourLogo\\nourLogo.png",
+      "PackagePath": "staticwebassets\\images\\nourLogo\\nourLogo.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\others\\outVision.jpg",
       "PackagePath": "staticwebassets\\images\\others\\outVision.jpg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\235827be-f2b1-4f62-8719-d24008081162.jpeg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\235827be-f2b1-4f62-8719-d24008081162.jpeg",
       "PackagePath": "staticwebassets\\images\\posts\\235827be-f2b1-4f62-8719-d24008081162.jpeg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\5a1cfdc9-aeea-4178-b45c-f1311d4f58b6.jpeg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\5a1cfdc9-aeea-4178-b45c-f1311d4f58b6.jpeg",
       "PackagePath": "staticwebassets\\images\\posts\\5a1cfdc9-aeea-4178-b45c-f1311d4f58b6.jpeg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\5f455132-e622-4fe0-a9b8-d53fbb70cf03.jpeg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\5f455132-e622-4fe0-a9b8-d53fbb70cf03.jpeg",
       "PackagePath": "staticwebassets\\images\\posts\\5f455132-e622-4fe0-a9b8-d53fbb70cf03.jpeg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\post1.jpeg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\post1.jpeg",
       "PackagePath": "staticwebassets\\images\\posts\\post1.jpeg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\post2.jpg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\post2.jpg",
       "PackagePath": "staticwebassets\\images\\posts\\post2.jpg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\post3.jpg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\post3.jpg",
       "PackagePath": "staticwebassets\\images\\posts\\post3.jpg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\post4.jpg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\posts\\post4.jpg",
       "PackagePath": "staticwebassets\\images\\posts\\post4.jpg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\1d6d980f-9c70-49d9-b1a2-0a3a0f8229cc.jfif",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\14e8405a-b54f-4b0a-a413-f837ad379075.jpeg",
+      "PackagePath": "staticwebassets\\images\\services\\14e8405a-b54f-4b0a-a413-f837ad379075.jpeg"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\1d6d980f-9c70-49d9-b1a2-0a3a0f8229cc.jfif",
       "PackagePath": "staticwebassets\\images\\services\\1d6d980f-9c70-49d9-b1a2-0a3a0f8229cc.jfif"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\1ef1d253-2adf-42f2-98d3-d8c86fef8c36.jfif",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\1ef1d253-2adf-42f2-98d3-d8c86fef8c36.jfif",
       "PackagePath": "staticwebassets\\images\\services\\1ef1d253-2adf-42f2-98d3-d8c86fef8c36.jfif"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\46112f77-abee-45ce-8305-6d196c71db90.jfif",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\46112f77-abee-45ce-8305-6d196c71db90.jfif",
       "PackagePath": "staticwebassets\\images\\services\\46112f77-abee-45ce-8305-6d196c71db90.jfif"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\5b69760e-40bd-4945-b5f2-a47322a8ac81.jpg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\5b69760e-40bd-4945-b5f2-a47322a8ac81.jpg",
       "PackagePath": "staticwebassets\\images\\services\\5b69760e-40bd-4945-b5f2-a47322a8ac81.jpg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\85051074-bcb0-461c-a154-d61fa48ece02.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\85051074-bcb0-461c-a154-d61fa48ece02.png",
       "PackagePath": "staticwebassets\\images\\services\\85051074-bcb0-461c-a154-d61fa48ece02.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\9459b53b-e5d2-4025-af52-3a7aafd36351.jfif",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\9459b53b-e5d2-4025-af52-3a7aafd36351.jfif",
       "PackagePath": "staticwebassets\\images\\services\\9459b53b-e5d2-4025-af52-3a7aafd36351.jfif"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\9df594f3-21b7-4f0c-866a-c26713916469.jpg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\9df594f3-21b7-4f0c-866a-c26713916469.jpg",
       "PackagePath": "staticwebassets\\images\\services\\9df594f3-21b7-4f0c-866a-c26713916469.jpg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\a7061e5d-fcba-49a7-ba31-70697abc6903.jfif",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\a7061e5d-fcba-49a7-ba31-70697abc6903.jfif",
       "PackagePath": "staticwebassets\\images\\services\\a7061e5d-fcba-49a7-ba31-70697abc6903.jfif"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\a8d05a1f-cb1a-46c2-a53b-f876654314cf.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\a8d05a1f-cb1a-46c2-a53b-f876654314cf.png",
       "PackagePath": "staticwebassets\\images\\services\\a8d05a1f-cb1a-46c2-a53b-f876654314cf.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\c7014644-99ff-43dd-add0-5247a2e27985.jpg",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\c7014644-99ff-43dd-add0-5247a2e27985.jpg",
       "PackagePath": "staticwebassets\\images\\services\\c7014644-99ff-43dd-add0-5247a2e27985.jpg"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\dc09e13b-d6d0-4c4d-a7d0-7af5d35039d7.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\dc09e13b-d6d0-4c4d-a7d0-7af5d35039d7.png",
       "PackagePath": "staticwebassets\\images\\services\\dc09e13b-d6d0-4c4d-a7d0-7af5d35039d7.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\fa6ec40f-223e-42a3-bb30-8b008920914e.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\fa6ec40f-223e-42a3-bb30-8b008920914e.png",
       "PackagePath": "staticwebassets\\images\\services\\fa6ec40f-223e-42a3-bb30-8b008920914e.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\fcb41a26-dbeb-4e4d-9ae2-cbbac3e705fe.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\services\\fcb41a26-dbeb-4e4d-9ae2-cbbac3e705fe.png",
       "PackagePath": "staticwebassets\\images\\services\\fcb41a26-dbeb-4e4d-9ae2-cbbac3e705fe.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\wave.png",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\videoCategoryIcon\\05663ac5-3a85-49cb-9521-26ce4f6e4ef5.png",
+      "PackagePath": "staticwebassets\\images\\videoCategoryIcon\\05663ac5-3a85-49cb-9521-26ce4f6e4ef5.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\videoCategoryIcon\\09c0af42-8554-4855-9233-8007f6f3ba27.png",
+      "PackagePath": "staticwebassets\\images\\videoCategoryIcon\\09c0af42-8554-4855-9233-8007f6f3ba27.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\videoCategoryIcon\\1d66e5a3-9694-46e0-8269-914917b964fc.png",
+      "PackagePath": "staticwebassets\\images\\videoCategoryIcon\\1d66e5a3-9694-46e0-8269-914917b964fc.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\videoCategoryIcon\\23c7b71d-e545-4d06-92b6-aa8a91a522fb.png",
+      "PackagePath": "staticwebassets\\images\\videoCategoryIcon\\23c7b71d-e545-4d06-92b6-aa8a91a522fb.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\videoCategoryIcon\\24f3c77e-8517-48bd-a980-093e728ef9a7.png",
+      "PackagePath": "staticwebassets\\images\\videoCategoryIcon\\24f3c77e-8517-48bd-a980-093e728ef9a7.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\videoCategoryIcon\\3ce3180d-6114-4d9f-afd7-f4dcf4a62f2d.png",
+      "PackagePath": "staticwebassets\\images\\videoCategoryIcon\\3ce3180d-6114-4d9f-afd7-f4dcf4a62f2d.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\videoCategoryIcon\\7e3413d4-1a74-48c3-ab39-eddf1d139687.png",
+      "PackagePath": "staticwebassets\\images\\videoCategoryIcon\\7e3413d4-1a74-48c3-ab39-eddf1d139687.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\videoCategoryIcon\\bdb576df-1d22-442b-a2e0-e6f30b04e29e.png",
+      "PackagePath": "staticwebassets\\images\\videoCategoryIcon\\bdb576df-1d22-442b-a2e0-e6f30b04e29e.png"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\wave.png",
       "PackagePath": "staticwebassets\\images\\wave.png"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\js\\site.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\js\\NourScript.js",
+      "PackagePath": "staticwebassets\\js\\NourScript.js"
+    },
+    {
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

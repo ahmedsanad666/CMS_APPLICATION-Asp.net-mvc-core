@@ -1,0 +1,83 @@
+﻿@model CMScenter.Views.Models.Video;
+@using Microsoft.AspNetCore.Identity;
+@inject UserManager<IdentityUser> userManager
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    ViewData["Title"] = "Delete Video";
+    Layout = "~/Views/Shared/_NourLayout.cshtml";
+
+}
+
+
+
+
+<section class="control_page Add_member flex-column min-vh-100 ">
+    <partial name="_NourAdminNav" />
+
+
+    @if (culture == "en")
+    {
+
+        <h1 class="text-center my-5 "> Delete Video</h1>
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 "> حذف فيديو</h1>
+
+    }
+
+
+
+    <div class="settingsData  mt-3">
+        <form method="post" asp-action="Delete" enctype="multipart/form-data">
+            <input asp-for="Id" hidden />
+            <input asp-for="Thumbnail" hidden />
+
+
+            <div class="row gap-1">
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="Thumbnail"></label>
+                    <input disabled type="file" asp-for="Thumbnail" name="file" />
+                    <span asp-validation-for="Thumbnail" class="text-danger"></span>
+
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="EnTitle"></label>
+                    <input disabled type="text" asp-for="EnTitle" />
+                    <span asp-validation-for="EnTitle" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="ArTitle  "></label>
+                    <input disabled type="text" asp-for="ArTitle" />
+                    <span asp-validation-for="ArTitle" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+
+            
+
+          
+                <div class="col-12 col-md-6">
+
+                    <input type="hidden" name="UserId" value="@userManager.GetUserId(User)" />
+
+
+                </div>
+              
+
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="NourAdmin" asp-controller="Videos" asp-action="Index">Back</a>
+                    <button class="edit btn btn-danger" type="submit">
+                        Delete
+                    </button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.Extensions.FileSystemGlobbing.Internal;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +16,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
     builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
-builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddDefaultTokenProviders()
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+//..........................
+
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 builder.Services
@@ -61,9 +64,16 @@ app.UseAuthentication();;
 app.UseAuthorization();
 app.MapRazorPages();
 
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{area=PublicHTML}/{controller=Home}/{action=Index}/{id?}");
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{area=PublicHTML}/{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area=NourGram}/{controller=Home}/{action=Index}/{id?}");
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{area=NourAdmin}/{controller=NourAdmin}/{action=Index}/{id?}");
 
 //app.MapControllerRoute(
 //    name: "default",

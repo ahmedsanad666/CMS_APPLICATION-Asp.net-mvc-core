@@ -21,7 +21,7 @@ namespace CMScenter.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<Posts> allPosts = _db.posts.Include(u => u.postsCategory).ToList();
+            List<Posts> allPosts = _db.Posts.Include(u => u.postsCategory).ToList();
             return View(allPosts);
         }
 
@@ -31,7 +31,7 @@ namespace CMScenter.Areas.Admin.Controllers
         {
             Posts post = new Posts();
 
-            IEnumerable<SelectListItem> PostCategoryList  = _db.postsCategories.Select(
+            IEnumerable<SelectListItem> PostCategoryList = _db.PostsCategories.Select(
             u => new SelectListItem
             {
                 Text = u.enName,
@@ -75,7 +75,7 @@ namespace CMScenter.Areas.Admin.Controllers
                     obj.PostImage = @"\images\posts\" + FileName + extention;
 
                 }
-                _db.posts.Add(obj);
+                _db.Posts.Add(obj);
                 _db.SaveChanges();
                 //return RedirectToAction("Index", "Post", new { area = "Admin" });
                 return RedirectToAction("Index");
@@ -87,15 +87,15 @@ namespace CMScenter.Areas.Admin.Controllers
         public IActionResult Edit(int id)
         {
 
-            Posts post = _db.posts.FirstOrDefault(u => u.Id == id);
-            IEnumerable<SelectListItem> PostCategoryList = _db.postsCategories.Select(
+            Posts post = _db.Posts.FirstOrDefault(u => u.Id == id);
+            IEnumerable<SelectListItem> PostCategoryList = _db.PostsCategories.Select(
            u => new SelectListItem
            {
                Text = u.enName,
                Value = u.Id.ToString()
            });
             ViewBag.PostCategoryList = PostCategoryList;
-            return View(post);
+            return View();
         }
 
         [HttpPost]
@@ -130,7 +130,7 @@ namespace CMScenter.Areas.Admin.Controllers
                     obj.PostImage = @"\images\posts\" + FileName + extention;
 
                 }
-                _db.posts.Update(obj);
+                _db.Posts.Update(obj);
                 _db.SaveChanges();
                 //return RedirectToAction("Index", "Post", new { area = "Admin" });
                 return RedirectToAction("Index");
@@ -145,7 +145,7 @@ namespace CMScenter.Areas.Admin.Controllers
         public IActionResult Delete(int id)
         {
 
-            Posts post = _db.posts.FirstOrDefault(u => u.Id == id);
+            Posts post = _db.Posts.FirstOrDefault(u => u.Id == id);
             return View(post);
         }
 
@@ -154,13 +154,13 @@ namespace CMScenter.Areas.Admin.Controllers
         public IActionResult DeletePost(int id)
         {
 
-            Posts post = _db.posts.FirstOrDefault(u => u.Id == id);
-            if(post == null)
+            Posts post = _db.Posts.FirstOrDefault(u => u.Id == id);
+            if (post == null)
             {
                 return NotFound();
             }
 
-            _db.posts.Remove(post);
+            _db.Posts.Remove(post);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }

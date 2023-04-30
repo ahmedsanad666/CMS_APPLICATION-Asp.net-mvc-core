@@ -19,20 +19,22 @@ namespace CMScenter.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<SubmenuBox> submenu = _db.submenuBoxes.ToList();
+            List<SubmenuBox> submenu = _db.SubmenuBoxes.ToList();
             return View(submenu);
         }
 
         // edit 
         public IActionResult Edit(int id)
         {
-            SubmenuBox submenu = _db.submenuBoxes.FirstOrDefault(u => u.Id == id);
+            SubmenuBox submenu = _db.SubmenuBoxes.FirstOrDefault(u => u.Id == id);
 
             if (submenu == null)
             {
-                return NotFound(); 
+                return NotFound();
             }
-        
+            
+
+
             return View(submenu);
 
         }
@@ -44,7 +46,7 @@ namespace CMScenter.Areas.Admin.Controllers
             
             if (ModelState.IsValid)
             {
-                _db.submenuBoxes.Update(obj);
+                _db.SubmenuBoxes.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }

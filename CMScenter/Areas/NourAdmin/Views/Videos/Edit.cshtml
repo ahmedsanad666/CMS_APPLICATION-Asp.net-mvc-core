@@ -1,0 +1,128 @@
+﻿@model CMScenter.Views.Models.Video;
+@using Microsoft.AspNetCore.Identity;
+@inject UserManager<IdentityUser> userManager
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    ViewData["Title"] = "Create Video";
+    Layout = "~/Views/Shared/_NourLayout.cshtml";
+
+}
+
+
+
+
+<section class="control_page Add_member flex-column min-vh-100 ">
+    <partial name="_NourAdminNav" />
+
+
+    @if (culture == "en")
+    {
+
+        <h1 class="text-center my-5 "> Edit Video</h1>
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 "> تعديل فيديو</h1>
+
+    }
+
+    
+
+    <div class="settingsData  mt-3">
+        <form method="post" asp-action="Edit" enctype="multipart/form-data">
+
+            <div class="row gap-1">
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="Thumbnail"></label>
+                    <input type="file" asp-for="Thumbnail" name="file" />
+                    <span asp-validation-for="Thumbnail" class="text-danger"></span>
+
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="EnTitle"></label>
+                    <input type="text" asp-for="EnTitle" />
+                    <span asp-validation-for="EnTitle" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="ArTitle  "></label>
+                    <input type="text" asp-for="ArTitle" />
+                    <span asp-validation-for="ArTitle" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="ArDescription"></label>
+                    <textarea asp-for="ArDescription" rows="3"></textarea>
+                    <span asp-validation-for="ArDescription" class="text-danger"></span>
+
+                </div>
+                @*..............*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="EnDescription"></label>
+                    <textarea asp-for="EnDescription" rows="3"></textarea>
+                    <span asp-validation-for="EnDescription" class="text-danger"></span>
+
+                </div>
+                @*............*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="Link"></label>
+
+                    <input asp-for="Link">
+                    <span asp-validation-for="Link" class="text-danger"></span>
+
+                </div>
+                @*............*@
+
+                @*............*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="IsFeatured"></label>
+                    <input type="checkbox" asp-for="IsFeatured">
+                    <span asp-validation-for="IsFeatured" class="text-danger"></span>
+
+                </div>
+                @*............*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="Tags"></label>
+                    <input asp-for="Tags">
+                    <span asp-validation-for="Tags" class="text-danger"></span>
+
+                </div>
+                @*............*@
+                <div class="col-12 col-md-6">
+
+                    <input type="hidden" name="UserId" value="@userManager.GetUserId(User)" />
+
+
+                </div>
+                @*............*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="ContributorId"></label>
+                    <select asp-for="ContributorId" asp-items="ViewBag.contributors">
+                        <option>--Contributor</option>
+                    </select>
+                    <span asp-validation-for="ContributorId" class="text-danger"></span>
+                </div>
+                @*....................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="VideoCatId"></label>
+                    <select asp-for="VideoCatId" asp-items="ViewBag.VideoCat">
+                        <option>--Category</option>
+                    </select>
+                    <span asp-validation-for="ContributorId" class="text-danger"></span>
+                </div>
+
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="NourAdmin" asp-controller="Videos" asp-action="Index">Back</a>
+                    <button class="edit" type="submit">submit</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

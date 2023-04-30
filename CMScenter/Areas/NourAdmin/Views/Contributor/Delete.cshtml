@@ -1,0 +1,67 @@
+﻿@model CMScenter.Views.Models.Contributor;
+@using Microsoft.AspNetCore.Identity;
+@inject UserManager<IdentityUser> userManager
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    ViewData["Title"] = "Delete Contributor";
+    Layout = "~/Views/Shared/_NourLayout.cshtml";
+
+}
+
+
+
+
+<section class="control_page Add_member flex-column min-vh-100 ">
+    <partial name="_NourAdminNav" />
+
+
+    @if (culture == "en")
+    {
+
+        <h1 class="text-center my-5 "> Delete Contributor</h1>
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 "> حذف عضو</h1>
+
+    }
+
+
+
+    <div class="settingsData  mt-3">
+        <form method="post" asp-action="Delete" enctype="multipart/form-data">
+            <input asp-for="Id" hidden />
+            <input asp-for="ProfileImage" hidden />
+
+
+            <div class="row gap-1">
+
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="ArName"></label>
+                    <input disabled type="text" asp-for="ArName" />
+                    <span asp-validation-for="ArName" class="text-danger"></span>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label asp-for="EnName"></label>
+                    <input disabled type="text" asp-for="EnName" />
+                    <span asp-validation-for="EnName" class="text-danger"></span>
+                </div>
+             
+
+
+                @*............*@
+
+
+
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="NourAdmin" asp-controller="Contributor" asp-action="Index">Back</a>
+                    <button class="edit" type="submit">submit</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

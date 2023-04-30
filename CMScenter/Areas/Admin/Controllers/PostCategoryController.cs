@@ -16,7 +16,7 @@ namespace CMScenter.Areas.Admin.Controllers
         public IActionResult Index()
         {
 
-            List<PostsCategory> categoris = _db.postsCategories.ToList();
+            List<PostsCategory> categoris = _db.PostsCategories.ToList();
             return View(categoris);
         }
 
@@ -36,7 +36,7 @@ namespace CMScenter.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _db.postsCategories.Add(obj);
+                _db.PostsCategories.Add(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -48,11 +48,12 @@ namespace CMScenter.Areas.Admin.Controllers
         public IActionResult Edit(int id)
         {
 
-            PostsCategory postcat = _db.postsCategories.FirstOrDefault(u => u.Id == id);
-            if(postcat == null)
+            PostsCategory postcat = _db.PostsCategories.FirstOrDefault(u => u.Id == id);
+            if (postcat == null)
             {
                 return NotFound();
             }
+            
             return View(postcat);
         }
 
@@ -63,7 +64,7 @@ namespace CMScenter.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _db.postsCategories.Update(obj);
+                _db.PostsCategories.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -75,9 +76,9 @@ namespace CMScenter.Areas.Admin.Controllers
         //delete
         public IActionResult Delete(int id)
         {
-            PostsCategory cat = _db.postsCategories.FirstOrDefault(u => u.Id == id);
+            PostsCategory cat = _db.PostsCategories.FirstOrDefault(u => u.Id == id);
 
-            if(cat == null)
+            if (cat == null)
             {
                 return NotFound();
             }
@@ -91,7 +92,7 @@ namespace CMScenter.Areas.Admin.Controllers
         public IActionResult DeletePost(int id)
         {
 
-            PostsCategory cat = _db.postsCategories.FirstOrDefault(u => u.Id == id);
+            PostsCategory cat = _db.PostsCategories.FirstOrDefault(u => u.Id == id);
             _db.Remove(cat);
             _db.SaveChanges();
 

@@ -1,0 +1,95 @@
+﻿
+@using Microsoft.AspNetCore.Identity
+
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+   @{
+string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+
+   }
+
+
+
+<nav class="HomeNav text-center">
+    <div class="row">
+        <div class="col">
+          <div class="brand">
+                <a asp-area="NourGram" asp-controller="Home" asp-action="Index">
+                    <img  src="~/images/nourLogo/nourLogo.png"/>
+                </a>
+          </div>
+        </div>
+        <div class="col-md-7 col-6  justify-content-center align-items-center d-sm-flex d-none ">
+            
+          <form>
+              <input  placeholder="Search"/>
+              <button class="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+          </form>
+        </div>
+        <div class="col d-flex justify-content-center align-items-center">
+          
+           <div class=" userOptions" id="userOption">
+               USER
+           </div>
+        </div>
+    </div>
+
+    @*.........options menu....*@
+
+    <div class="optionMenu">
+        @if(culture == "en")
+        {
+
+        <ul class=" gap-3">
+            <li class="d-flex justify-content-center align-items-center gap-2 ">
+                    <div class=" userOptions" id="userOption">
+                        USER
+                    </div>
+                    <div>
+                        <h6>@UserManager.GetUserName(User)</h6>
+                    </div>
+            </li>
+           <li>
+               <a asp-area="NourAdmin" asp-controller="NourAdmin"  asp-action="Index">
+
+                    <i class="fa-solid fa-user mx   2"></i>  My Channel
+               </a>
+           </li>
+           <li class="culturOption">
+
+                    <partial name="_CultureOptionMenu" />
+           </li>
+            <li class="LogInOption">
+                    <partial name="_LoginOptionMenu" />
+            </li>
+        </ul>
+        }else{
+            <ul class=" gap-3">
+                <li class="d-flex justify-content-center align-items-center gap-2 ">
+                    <div class=" userOptions" id="userOption">
+                        USRE
+                    </div>
+                    <div>
+                        <h6>@UserManager.GetUserName(User)</h6>
+                    </div>
+                </li>
+                <li>
+                    <a asp-area="NourAdmin" asp-controller="NourAdmin" asp-action="Index">
+
+                        <i class="fa-solid fa-user mx   2"></i>  قناتى
+                    </a>
+                </li>
+                <li class="culturOption">
+
+                    <partial name="_CultureOptionMenu" />
+                </li>
+                <li class="LogInOption">
+                    <partial name="_LoginOptionMenu" />
+                </li>
+            </ul>
+        }
+    </div>
+</nav>

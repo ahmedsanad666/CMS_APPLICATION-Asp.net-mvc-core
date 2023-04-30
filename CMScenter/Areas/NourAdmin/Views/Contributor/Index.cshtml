@@ -1,0 +1,182 @@
+﻿@model List<CMScenter.Views.Models.Contributor>
+@{
+    ViewData["Title"] = "Contributors";
+    Layout = "~/Views/Shared/_NourLayout.cshtml";
+
+
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="CategoryPage min-vh-100  container">
+    <partial name="_NourAdminNav" />
+
+    @if (culture == "en")
+    {
+
+        <h1 class="text-center my-3 py-5">All Contributors </h1>
+
+
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 ">   المساهمين</h1>
+
+    }
+
+
+
+
+
+
+
+    <div class="add_new_post container ">
+        <a asp-area="NourAdmin" asp-controller="Contributor" asp-action="Create"><i class="fa-solid fa-plus mx-3"></i>  Add New</a>
+    </div>
+    <table class="table table-striped table-dark container px-5">
+
+
+        <thead>
+            <tr>
+                @if (culture == "en")
+                {
+                    <th scope="col"> Name</th>
+
+                    <th scope="col">Biography</th>
+                    <th scope="col">Profile</th>
+               
+                  
+
+                    <th scope="col">Status</th>
+                   
+                 
+
+
+                    <th scope="col">Controllers</th>
+                }
+                else
+                {
+                    <th scope="col"> الاسم</th>
+
+                    <th scope="col">نبذه</th>
+                    <th scope="col">الصورة</th>
+
+
+                    <th scope="col">الحالة</th>
+                   
+
+
+
+                    <th scope="col">التحكم</th>
+                }
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var el in Model)
+            {
+
+                @if (culture == "en")
+                {
+                    <tr>
+
+
+                        <td class="Tbletitle">@el.EnName</td>
+
+
+
+                        <td>
+                            <p class="postDesAdmin">
+
+                                @el.Biography
+                            </p>
+                        </td>
+                        <td>
+                            <div class="PostImageAdmin">
+                                <img src=" @el.ProfileImage" />
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="PostImageAdmin">
+                                @el.ContributorStatus
+
+                            </div>
+                        </td>
+
+
+
+                        <td class="postControllers d-flex flex-column flex-md-row gap-2">
+
+                            <a class="btn btn-success " asp-area="NourAdmin" asp-controller="Contributor" asp-action="Edit" asp-route-id="@el.Id">Edit</a>
+                            <a class="btn btn-danger " asp-area="NourAdmin" asp-controller="Contributor" asp-action="delete" asp-route-id="@el.Id">Delete</a>
+
+
+                        </td>
+
+                    </tr>
+
+                }
+                else
+                {
+                    <tr>
+
+
+                        <td>@el.ArName</td>
+
+
+
+                        <td>
+                            <p class="postDesAdmin">
+
+                                @el.Biography
+                            </p>
+                        </td>
+                        <td>
+                            <div class="PostImageAdmin">
+                                <img src="     @el.ProfileImage" />
+
+                            </div>
+                        </td>
+                      
+
+                      
+                        <td>
+                            <div class="PostImageAdmin">
+                                @el.ContributorStatus
+
+                            </div>
+                        </td>
+
+
+                        <td class="postControllers d-flex flex-column flex-md-row gap-2">
+
+                            <a class="btn btn-success " asp-area="NourAdmin" asp-controller="Contributor" asp-action="Edit" asp-route-id="@el.Id">تعديل</a>
+                            <a class="btn btn-danger " asp-area="NourAdmin" asp-controller="Contributor" asp-action="delete" asp-route-id="@el.Id">حذف</a>
+
+
+
+                        </td>
+
+                    </tr>
+                }
+
+
+            }
+
+        </tbody>
+    </table>
+</section>

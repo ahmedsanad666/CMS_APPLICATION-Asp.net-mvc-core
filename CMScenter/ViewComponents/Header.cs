@@ -21,12 +21,12 @@ namespace CMScenter.ViewComponents
             ViewModel vmModel = new ViewModel()
             {
                 appSettings = await _db.AppSittings.FirstOrDefaultAsync(u => u.Id == 1),
-               subMenu = await _db.submenuBoxes.ToListAsync()
+                subMenu = await _db.SubmenuBoxes.ToListAsync()
             };
-            //AppSittings settings = await _db.AppSittings.FirstOrDefaultAsync(u => u.Id == 1);
+            AppSittings settings = await _db.AppSittings.FirstOrDefaultAsync(u => u.Id == 1);
 
 
-           
+
 
             return View(vmModel);
         }

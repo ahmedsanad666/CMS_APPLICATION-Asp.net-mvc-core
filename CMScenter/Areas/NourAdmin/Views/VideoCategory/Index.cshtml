@@ -1,0 +1,145 @@
+﻿@model List<CMScenter.Views.Models.VideoCat>
+@{
+    ViewData["Title"] = "Categories";
+    Layout = "~/Views/Shared/_NourLayout.cshtml";
+
+ 
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="CategoryPage min-vh-100  container">
+    <partial name="_NourAdminNav"/>
+
+    @if (culture == "en")
+    {
+       
+    <h1 class="text-center my-3 py-5">Video Cateogries </h1>
+
+     
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 ">  اقسام الفيديوهات</h1>
+
+    }
+
+
+
+
+
+
+
+        <div class="add_new_post container ">
+        <a asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="Create"><i class="fa-solid fa-plus mx-3"></i>  Add Category</a>
+        </div>
+    <table class="table table-striped table-dark container px-5">
+
+    
+        <thead>
+            <tr>
+                @if(culture == "en")
+                {
+                    <th scope="col"> Name</th>
+                 
+                    <th scope="col">Description</th>
+                    <th scope="col">Image</th>
+
+                
+                    <th scope="col">Controllers</th>
+                }
+                else{
+                    <th scope="col"> الاسم</th>
+                  
+                    <th scope="col">الوصف</th>
+                    <th scope="col">الصورة</th>
+
+       
+                    <th scope="col">التحكم</th>
+                    }
+
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var el in Model)
+            {
+
+                @if(culture == "en")
+                {
+                <tr>
+               
+               
+                <td>@el.EnName</td>
+
+            
+               
+                <td>
+                    <p class="postDesAdmin">
+
+                   @el.EnDescription
+                    </p>
+                    </td> 
+                    <td>
+                            <div class="PostImageAdmin">
+                                <img src="     @el.Icon" />
+
+                            </div>
+                    </td>
+                  
+                        <td class="d-flex flex-column flex-md-row gap-2 postControllers">
+                            <a class="btn btn-success " asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="Edit" asp-route-id="@el.Id">Edit</a>
+                            <a class="btn btn-danger " asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="delete" asp-route-id="@el.Id">Delete</a>
+                    </td>
+
+            </tr>
+
+                }
+                else
+                {
+                    <tr>
+
+
+                        <td>@el.ArName</td>
+
+                      
+
+                        <td>
+                            <p class="postDesAdmin">
+
+                                @el.ArDescription
+                            </p>
+                        </td> 
+                        <td>
+                            <div class="PostImageAdmin">
+                                <img src="     @el.Icon" />
+                       
+                            </div>
+                        </td>
+                      
+                        <td class="d-flex flex-column flex-md-row gap-2 postControllers">
+                            <a class="btn btn-success " asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="Edit" asp-route-id="@el.Id">تعديل</a>
+                            <a class="btn btn-danger " asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="delete" asp-route-id="@el.Id">حذف</a>
+                        </td>
+
+                    </tr>
+                }
+                
+            
+            }
+ 
+        </tbody>
+    </table>
+    </section>

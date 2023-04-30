@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YyN0XFxCqH9fr6VXbCssmkvCtJ1Z0yXWjpCi5NO4q5PohIweKJSptvG2bsOvLSLIVSQijsgBx2HXKJWUjnkbVQ==",
+  "dgSpecHash": "lz/KN/4gS+ABgvk+ZcGNpE4+3IHLTsc6YpQyuyKRugufipro2cJ5oTz76W5Jye+ul9+n/CRHT2Bq6cVEvRygcw==",
   "success": true,
-  "projectFilePath": "C:\\asp work\\CMScenter\\CMScenter\\CMScenter.csproj",
+  "projectFilePath": "D:\\asp work\\CMScenter\\CMScenter\\CMScenter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmme\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ahmme\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

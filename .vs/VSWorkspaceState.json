@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CMScenter",
+    "\\CMScenter\\Areas",
+    "\\CMScenter\\Areas\\NourGram",
+    "\\CMScenter\\Areas\\NourGram\\Controllers",
+    "\\CMScenter\\Areas\\NourGram\\Views",
+    "\\CMScenter\\Areas\\NourGram\\Views\\Video",
+    "\\CMScenter\\Views",
+    "\\CMScenter\\Views\\Models",
+    "\\CMScenter\\Views\\Shared"
+  ],
+  "SelectedNode": "\\CMScenter.sln",
+  "PreviewInSolutionExplorer": false
+}

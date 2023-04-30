@@ -1,0 +1,202 @@
+﻿@model List<CMScenter.Views.Models.Video>
+@{
+    ViewData["Title"] = " Pinned Videos";
+    Layout = "~/Views/Shared/_NourLayout.cshtml";
+
+
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="CategoryPage min-vh-100  container">
+    <partial name="_NourAdminNav" />
+
+    @if (culture == "en")
+    {
+
+        <h1 class="text-center my-3 py-5">Pinned Videos </h1>
+
+
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 ">  الفيديوهات المعلقة</h1>
+
+    }
+
+
+
+
+
+
+
+    <div class="add_new_post container ">
+       
+    </div>
+    <table class="table table-striped table-dark container px-5">
+
+
+        <thead>
+            <tr>
+                @if (culture == "en")
+                {
+                    <th scope="col"> Title</th>
+
+                    <th scope="col">Description</th>
+                    <th scope="col">Thumbnail</th>
+                    <th scope="col">Contributer</th>
+
+
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+
+
+                    <th scope="col">Controllers</th>
+                }
+                else
+                {
+                    <th scope="col"> الاسم</th>
+
+                    <th scope="col">الوصف</th>
+                    <th scope="col">الصورة</th>
+                    <th scope="col">المقدم</th>
+
+                    <th scope="col">تاريخ</th>
+                    <th scope="col">الحالة</th>
+
+
+
+                    <th scope="col">التحكم</th>
+                }
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var el in Model)
+            {
+
+                @if (culture == "en")
+                {
+                    <tr>
+
+
+                        <td class="postDesAdmin">@el.EnTitle</td>
+
+
+
+                        <td>
+                            <p class="postDesAdmin">
+
+                                @el.EnDescription
+                            </p>
+                        </td>
+                        <td>
+                            <div class="PostImageAdmin">
+                                <img src=" @el.Thumbnail" />
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class=" postDesAdmin">
+                                @el.Contributor.EnName
+
+                            </div>
+                        </td>
+                        <td >
+                            <div class="PostImageAdmin">
+                                @el.RecordDate.ToShortDateString()
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="PostImageAdmin">
+                                @el.VideoStatus
+
+                            </div>
+                        </td>
+
+
+
+                        <td class="postControllers d-flex flex-column flex-md-row gap-2">
+                          
+
+                                <a class="btn btn-success " href=" @Url.Action("Approve","Videos",new { id = @el.Id })">Approve</a>
+
+                            
+                        </td>
+
+                    </tr>
+
+                }
+                else
+                {
+                    <tr>
+
+
+                        <td class="postDesAdmin">@el.ArTitle</td>
+
+
+
+                        <td>
+                            <p class="postDesAdmin">
+
+                                @el.ArDescription
+                            </p>
+                        </td>
+                        <td>
+                            <div class="PostImageAdmin">
+                                <img src="     @el.Thumbnail" />
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="postDesAdmin">
+                                @el.Contributor.ArName
+
+                            </div>
+                        </td>
+
+                        <td >
+                            <div class="PostImageAdmin">
+                                @el.RecordDate.ToShortDateString()
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="PostImageAdmin">
+                                @el.VideoStatus
+
+                            </div>
+                        </td>
+
+
+                        <td class="postControllers d-flex flex-column flex-md-row gap-2">
+                   
+                              
+                                <a class="btn btn-success " href=" @Url.Action("Approve","Videos",new { id = @el.Id })">قبول</a>
+
+                                
+                        </td>
+
+                    </tr>
+                }
+
+
+            }
+
+        </tbody>
+    </table>
+</section>

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Common;
 using System.Diagnostics;
 
 namespace CMScenter.Areas.PublicHTML.Controllers
@@ -25,17 +26,18 @@ namespace CMScenter.Areas.PublicHTML.Controllers
 
         public IActionResult Index()
         {
-            // get app settings data for db
-            AppSittings settings = _db.AppSittings.FirstOrDefault(u => u.Id == 1);
-            // get current language 
+      
 
+
+           
+            AppSittings settings = _db.AppSittings.FirstOrDefault(u => u.Id == 1);
          
            
 
-            int teamNumber = _db.TeamMembers.Count(); 
+            int teamNumber = _db.TeamMembers.Count(); ;
            List<TeamMember> teamMember = _db.TeamMembers.ToList();
             List<Services> services = _db.Services.Include(u => u.courseCategory).ToList();
-            List<Posts> posts = _db.posts.Include(u => u.postsCategory).ToList();
+            List<Posts> posts = _db.Posts.Include(u => u.postsCategory).ToList();
 
 
 
@@ -46,8 +48,8 @@ namespace CMScenter.Areas.PublicHTML.Controllers
                 TeamMember = teamMember,
                 services = services,
                 posts = posts,
-                subMenu = _db.submenuBoxes.ToList()
-            
+                subMenu = _db.SubmenuBoxes.ToList()
+
             };
             return View(ViewModel);
         }

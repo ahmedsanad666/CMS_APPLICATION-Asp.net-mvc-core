@@ -1,0 +1,146 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+
+@{
+
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    string area = ViewContext.RouteData.Values["area"].ToString();
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @* google fonts*@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/blobz.min.css">
+    <link rel="stylesheet" href="~/css/NourStyle.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CMScenter.styles.css" asp-append-version="true" />
+
+
+</head>
+<body>
+    @*<div>
+        @RenderBody()
+    </div>*@
+
+    @if (area == "NourGram")
+    {
+
+        @await Component.InvokeAsync("NourHeader")
+    }
+
+    <div class="main-content">
+
+        <div class="row min-vh-100">
+                @if (area == "NourAdmin")
+                {
+            <div class="col col-2  px-4">
+
+                    <div class="AdminSideBar">
+                        <div class="AdminBrand my-3">
+                            <img src="~/images/nourLogo/nourLogo.png" />
+
+                        </div>
+                        <div class="navList py-4 mt-3">
+                            <ul>
+                                <li class="active">
+
+                                    <i class="fa-solid fa-house mx-3"></i> <a asp-area="NourAdmin" asp-controller="NourAdmin" asp-action="Index"> Home</a>
+                                </li> 
+                                <li>
+
+                                    <i class="fa-solid fa-video mx-3"></i> <a asp-area="NourAdmin" asp-controller="Videos" asp-action="Index">All Videos</a>
+                                </li>
+                                <li>
+
+                                    <i class="fa-solid fa-pencil mx-3"></i> <a asp-area="NourAdmin" asp-controller="Videos" asp-action="Create">Add Video</a>
+                                </li>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    
+                                <li>
+
+                                    <i class="fa-solid fa-pencil mx-3"></i> <a asp-area="NourAdmin" asp-controller="Videos" asp-action="PinnedVideos">Pinned Videos</a>
+                                </li>  
+                                <li>
+
+                                    <i class="fa-solid fa-pencil mx-3"></i> <a asp-area="NourAdmin" asp-controller="Contributor" asp-action="Index">Contributors</a>
+                                </li>  
+                                <li>
+
+                                        <i class="fa-solid fa-pencil mx-3"></i> <a asp-area="NourAdmin" asp-controller="Contributor" asp-action="PinnedContributor">Pinned Contributors</a>
+                                </li> 
+                                }
+                             
+                                <li>
+
+                                    <i class="fa-solid fa-list mx-3"></i><a asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="Index"> Videos Category</a>
+                                </li>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    
+                                <li>
+
+                                    <i class="fa-solid fa-user-tie mx-3"></i>  <a asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="Index"> Admins</a>
+                                </li>
+                                <li>
+
+                                    <i class="fa-solid fa-user mx-3"></i><a asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="Index"> Users</a>
+                                </li>
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+               @* else
+                {
+                    <h1>manin page side baar </h1>
+                }*@
+            </div>
+                }
+
+            <div class="col   ">
+
+                <div role="main">
+
+                    @RenderBody()
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+      @{
+        if (culture == "ar")
+        {
+            <script>
+ 
+            document.documentElement.setAttribute('dir', 'rtl');
+             
+
+            </script>
+
+        }
+      }
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+    <script src="~/js/NourScript.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -12,17 +12,17 @@
     </li>*@
     <li class="nav-item">
         <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button id="logout" type="submit" class="nav-link btn btn-link ">@localizer["LogOut"]</button>
+            <button id="logout" type="submit" >LougOut</button>
         </form>
     </li>
 }
 else
 {
     <li class="nav-item">
-        <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">@localizer["Register"]</a>
+        <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">@localizer["LogIn"]</a>
+        <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">LongIn</a>
     </li>
 }
 

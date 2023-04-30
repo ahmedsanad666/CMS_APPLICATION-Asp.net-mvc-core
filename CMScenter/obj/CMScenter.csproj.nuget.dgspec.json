@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\asp work\\CMScenter\\CMScenter\\CMScenter.csproj": {}
+    "D:\\asp work\\CMScenter\\CMScenter\\CMScenter.csproj": {}
   },
   "projects": {
-    "C:\\asp work\\CMScenter\\CMScenter\\CMScenter.csproj": {
+    "D:\\asp work\\CMScenter\\CMScenter\\CMScenter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\asp work\\CMScenter\\CMScenter\\CMScenter.csproj",
+        "projectUniqueName": "D:\\asp work\\CMScenter\\CMScenter\\CMScenter.csproj",
         "projectName": "CMScenter",
-        "projectPath": "C:\\asp work\\CMScenter\\CMScenter\\CMScenter.csproj",
+        "projectPath": "D:\\asp work\\CMScenter\\CMScenter\\CMScenter.csproj",
         "packagesPath": "C:\\Users\\ahmme\\.nuget\\packages\\",
-        "outputPath": "C:\\asp work\\CMScenter\\CMScenter\\obj\\",
+        "outputPath": "D:\\asp work\\CMScenter\\CMScenter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ahmme\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -108,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

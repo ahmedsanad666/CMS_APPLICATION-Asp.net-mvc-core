@@ -103,7 +103,8 @@ namespace CMScenter.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl ??= Url.Content("~/Admin/Admin");
+            //returnUrl ??= Url.Content("~/Admin/Admin");
+            returnUrl ??= Url.Content("~/NourAdmin/NourAdmin");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 

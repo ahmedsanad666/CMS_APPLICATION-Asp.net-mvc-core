@@ -1,0 +1,81 @@
+﻿@model CMScenter.Views.Models.VideoCat;
+@{
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    ViewData["Title"] = "Edit Category";
+    Layout = "~/Views/Shared/_NourLayout.cshtml";
+
+}
+
+
+
+
+<section class="control_page Add_member flex-column min-vh-100 ">
+    <partial name="_NourAdminNav" />
+
+
+    @if (culture == "en")
+    {
+
+        <h1 class="text-center my-5 "> Create Category</h1>
+
+    }
+    else
+    {
+        <h1 class="text-center my-5 "> انشاء قسم</h1>
+
+    }
+
+
+
+    <div class="settingsData  mt-3">
+        <form method="post" asp-action="Edit" enctype="multipart/form-data">
+            <input asp-for="Id" hidden />
+            <input asp-for="Icon" hidden />
+
+
+            <div class="row gap-1">
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="Icon"></label>
+                    <input type="file" asp-for="Icon" name="file" />
+                    <span asp-validation-for="Icon" class="text-danger"></span>
+
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="ArName"></label>
+                    <input type="text" asp-for="ArName" />
+                    <span asp-validation-for="ArName" class="text-danger"></span>
+                </div>
+                @*........................*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="EnName  "></label>
+                    <input type="text" asp-for="EnName" />
+                    <span asp-validation-for="EnName" class="text-danger"></span>
+                </div>
+                @*........................*@
+
+
+                <div class="col-12 col-md-6">
+                    <label asp-for="ArDescription"></label>
+                    <textarea asp-for="ArDescription" rows="3"></textarea>
+                    <span asp-validation-for="ArDescription" class="text-danger"></span>
+
+                </div>
+                @*..............*@
+                <div class="col-12 col-md-6">
+                    <label asp-for="EnDescription"></label>
+                    <textarea asp-for="EnDescription" rows="3"></textarea>
+                    <span asp-validation-for="EnDescription" class="text-danger"></span>
+
+                </div>
+                <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
+
+                    <a class="back" asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="Index">Back</a>
+                    <button class="edit" type="submit">submit</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

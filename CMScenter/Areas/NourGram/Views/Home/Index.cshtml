@@ -1,0 +1,111 @@
+﻿
+@model CMScenter.Views.Models.NourViewModel
+@{
+    ViewData["Title"] = "Home";
+    string Culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    Layout = "~/Views/Shared/_NourLayout.cshtml";
+
+}
+
+@functions {
+    public string videoId(string link)
+    {
+        Uri uri = new Uri(link);
+        string path = uri.AbsolutePath;
+
+        // Get the video ID from the path
+        string VideoId = path.Substring(1);
+
+            return VideoId;
+    }
+  }
+
+<div class="AllVideos  py-5 px-4">
+ 
+    <div class="container ">
+        <div class="row gap-3">
+            @foreach(var el in Model.videos)
+            {
+                @if (Culture == "en")
+                {
+                    <div class="col">
+                        <a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)">
+                            <div class="card">
+                                <div class="card__header">
+                                    <img src="@el.Thumbnail" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="card__body">
+                                    <span class="tag tag-blue">@el.VideoCat.EnName</span>
+                                    <h5>@el.EnTitle</h5>
+
+                                </div>
+                                <div class="card__footer">
+                                    <div class="user">
+                                        <img src="@el.Contributor.ProfileImage" alt="user__image" class="user__image">
+                                        <div class="user__info">
+
+                                            <h6>@el.Contributor.EnName</h6>
+                                            <small>2h ago</small>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <small>
+                                            350k  views
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                }
+                else
+                {
+                    <div class="col">
+                        <a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)">
+                            <div class="card">
+                                <div class="card__header">
+                                    <img src="@el.Thumbnail" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="card__body">
+                                    <span class="tag tag-blue">@el.VideoCat.ArName</span>
+                                    <h5>@el.ArTitle</h5>
+
+                                </div>
+                                <div class="card__footer">
+                                    <div class="user">
+                                        <img src="@el.Contributor.ProfileImage" alt="user__image" class="user__image">
+                                        <div class="user__info">
+
+                                            <h6>@el.Contributor.ArName</h6>
+                                            <small>2h ago</small>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <small>
+                                            350k  views
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                }
+
+          
+
+            }
+      
+        
+        
+
+           
+            
+        
+         
+        </div>
+    </div>
+</div>
