@@ -1,0 +1,6 @@
+﻿@model CMScenter.Views.Models.NourViewModel
+
+@foreach (var comment in Model.comments)
+{
+    <div>@comment.Content</div>
+}

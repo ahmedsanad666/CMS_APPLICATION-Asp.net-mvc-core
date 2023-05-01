@@ -52,7 +52,23 @@ $(document).ready(function () {
 
     })
 
+    // activeNavItem
+    let activeId = '';
+    $("#activeNavItem ul li a").click(function () {
+        $("#activeNavItem ul li").removeClass("active");
 
+        $(this).parent("li").addClass("active");
+        activeId = $(this).parent("li").attr("id");
+        localStorage.setItem("activeId", activeId);
+
+      
+
+    })
+
+    activeId = localStorage.getItem('activeId');
+    if (activeId) {
+        $('#' + activeId).addClass('active');
+    }
 
 
 

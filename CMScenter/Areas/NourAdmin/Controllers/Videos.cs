@@ -240,6 +240,8 @@ namespace CMScenter.Areas.NourAdmin.Controllers
             return View(allvideos);
         }
 
+
+
         public async Task<IActionResult> Approve(int id)
         {
             // Retrieve the entity to update from the database

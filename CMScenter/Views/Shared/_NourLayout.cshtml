@@ -27,10 +27,6 @@
 
 </head>
 <body>
-    @*<div>
-        @RenderBody()
-    </div>*@
-
     @if (area == "NourGram")
     {
 
@@ -49,49 +45,49 @@
                             <img src="~/images/nourLogo/nourLogo.png" />
 
                         </div>
-                        <div class="navList py-4 mt-3">
+                        <div class="navList py-4 mt-3" id="activeNavItem">
                             <ul>
-                                <li class="active">
+                                <li  id="1">
 
-                                    <i class="fa-solid fa-house mx-3"></i> <a asp-area="NourAdmin" asp-controller="NourAdmin" asp-action="Index"> Home</a>
+                                    <i class="fa-solid fa-house mx-3"></i>  <a asp-area="NourAdmin" asp-controller="NourAdmin" asp-action="Index"> Home</a>
                                 </li> 
-                                <li>
+                                <li id="2">
 
                                     <i class="fa-solid fa-video mx-3"></i> <a asp-area="NourAdmin" asp-controller="Videos" asp-action="Index">All Videos</a>
                                 </li>
-                                <li>
+                                <li id="3">
 
-                                    <i class="fa-solid fa-pencil mx-3"></i> <a asp-area="NourAdmin" asp-controller="Videos" asp-action="Create">Add Video</a>
+                                    <i class="fa-solid fa-video mx-3"></i> <a asp-area="NourAdmin" asp-controller="Videos" asp-action="Create">Add Video</a>
                                 </li>
                                 @if (User.IsInRole("Admin"))
                                 {
                                     
-                                <li>
+                                <li id="4">
 
                                     <i class="fa-solid fa-pencil mx-3"></i> <a asp-area="NourAdmin" asp-controller="Videos" asp-action="PinnedVideos">Pinned Videos</a>
                                 </li>  
-                                <li>
+                                <li id="5">
 
-                                    <i class="fa-solid fa-pencil mx-3"></i> <a asp-area="NourAdmin" asp-controller="Contributor" asp-action="Index">Contributors</a>
+                                        <i class="fa-solid fa-person mx-3"></i>  <a asp-area="NourAdmin" asp-controlleءذr="Contributor" asp-action="Index">Contributors</a>
                                 </li>  
-                                <li>
+                                <li id="6">
 
-                                        <i class="fa-solid fa-pencil mx-3"></i> <a asp-area="NourAdmin" asp-controller="Contributor" asp-action="PinnedContributor">Pinned Contributors</a>
+                                        <i class="fa-solid fa-pencil mx-1"></i> <a asp-area="NourAdmin" asp-controller="Contributor" asp-action="PinnedContributor">Pinned Contributors</a>
                                 </li> 
                                 }
                              
-                                <li>
+                                <li id="7">
 
                                     <i class="fa-solid fa-list mx-3"></i><a asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="Index"> Videos Category</a>
                                 </li>
                                 @if (User.IsInRole("Admin"))
                                 {
                                     
-                                <li>
+                                <li id="8">
 
                                     <i class="fa-solid fa-user-tie mx-3"></i>  <a asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="Index"> Admins</a>
                                 </li>
-                                <li>
+                                <li id="9">
 
                                     <i class="fa-solid fa-user mx-3"></i><a asp-area="NourAdmin" asp-controller="VideoCategory" asp-action="Index"> Users</a>
                                 </li>

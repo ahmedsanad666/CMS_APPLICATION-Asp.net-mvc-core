@@ -282,6 +282,7 @@ padding:1.5rem .7rem;
 .navList ul li{
     padding: 1rem 0;
         cursor:pointer;
+        position:relative;
 }
 
 .navList ul li.active{
@@ -290,10 +291,17 @@ padding:1.5rem .7rem;
     border-bottom-right-radius:14px;
 }
 
-.add_new_post {
-    padding: 2rem .8rem;
-    text-align: end;
-}
+    .navList ul li a {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 15px;
+      
+    }
+    .add_new_post {
+        padding: 2rem .8rem;
+        text-align: end;
+    }
 
     .add_new_post a {
         background-color: var(--main-red);
@@ -340,4 +348,77 @@ padding:1.5rem .7rem;
 .video iframe body.vp-center {
     border:2px red solid;
     align-items: flex-start !important;
+}
+
+/*
+   forms 
+*/
+
+.settingsData {
+    width: 75%;
+    padding: 1.2rem 1rem;
+    border-radius: 25px;
+    background: #0a0d16;
+    box-shadow: 0px 0px 13px 3px #030408;
+    margin: auto;
+    color: var(--main-light);
+}
+
+    .settingsData input, .settingsData label {
+        width: 80%;
+        margin: auto;
+    }
+
+    .settingsData input {
+        color: var(--main-light);
+        background: none;
+        box-shadow: 0px 0px 5px 1px #ccc;
+        border-radius: 15px;
+        padding: .4rem 1rem;
+    }
+
+
+    .settingsData .row > div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .settingsData textarea {
+        background: none;
+        color: var(--main-light);
+        border-radius: 20px;
+        padding: 1rem 0.4rem;
+        border: none;
+        height: 100px;
+        outline: none;
+        box-shadow: 0px 0px 5px 1px #ccc;
+        width: 80%;
+        margin: auto;
+    }
+
+    .settingsData img {
+        width: 34%;
+        margin: auto;
+        border-radius: 11px;
+    }
+
+.controllers .back, .controllers .edit {
+    padding: .8rem 3rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: var(--main-light);
+    border: none;
+    outline: none;
+}
+
+.back {
+    background: var(--main-blue);
+}
+
+.edit {
+    background: #27ae60;
 }

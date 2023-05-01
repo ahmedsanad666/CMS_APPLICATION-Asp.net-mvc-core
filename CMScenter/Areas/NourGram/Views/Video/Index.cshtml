@@ -1,9 +1,14 @@
 ﻿@model CMScenter.Views.Models.NourViewModel
-  @{  ViewData["Title"] = "Video";
+@using Microsoft.AspNetCore.Identity;
+@inject UserManager<IdentityUser> userManager
+@{
+    ViewData["Title"] = "Video";
 
     Layout = "~/Views/Shared/_NourLayout.cshtml";
-
+    string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
     var videoData = ViewBag.VideoData;
+
+
 
 }
 
@@ -28,19 +33,45 @@
 
                
                     <div class="video ">
-
+                       
                      @Html.Raw(videoData.embed.html)
 
                
                     </div>
-                    <div class="Description">
-                        des
+                    <div class="videoInfo">
+
+                    @Html.Raw(videoData.metadata.connections.likes.total)
+                    </div>
+                @*    <div class="Description">
+                        @if (culture == "en")
+                    {
+                    @Model.videItem.EnDescription
+
+                    }
+                    else
+                    {
+                        @Model.videItem.ArDescription
+                    }*@
                     </div>
                         <div class="Comments">
-                            dsfkj
-                            dsfj
-                            ds
+                    <form action="AddConmment"  method="post" >
+                        <input hidden asp-for="comment.Id" />
+                        <input type="hidden" name="UserId" value="@userManager.GetUserId(User)" />
+                        <input type="hidden" name="videoId" value="@ViewBag.videoId" />
+                        <input type="hidden" name="VimeoId" value="@ViewBag.vimeoId" />
+                          <textarea name="content" class="comment_area p-3 px-2" rows="4" placeholder="Add Your Comment" ></textarea>
+                          <button>Send</button>
+                            </form>
 
+                            <hr />
+                            <ul>
+
+                    @foreach(var el in Model.comments)
+                    {
+                        <li>@el.Content</li>
+                    }
+
+                            </ul>
                         </div>
                  </div>
               </div>
@@ -49,9 +80,8 @@
             {
              
                 <div>
-                    <a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)">
-
-
+                   <a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)" asp-route-Db="@el.Id">
+                  
 
 
                         <div class="card">

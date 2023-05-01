@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WiyNAWUjFL1t4EiOVY+hZCf2BnOhmAP2DGIM+ATVjP4=",
+  "Hash": "uH6B+EA524Xqdl9+m2kU9ac01GyhqqFxGWo9OZlTIqY=",
   "Source": "CMScenter",
   "BasePath": "_content/CMScenter",
   "Mode": "Default",
@@ -2344,6 +2344,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\VideosImages\\947d9d36-1866-495d-ad19-e2155ea8a43a.jpg"
+    },
+    {
+      "Identity": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\9bc2cdf2-68be-4121-93f0-535a154fe005.jpg",
+      "SourceId": "CMScenter",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\",
+      "BasePath": "_content/CMScenter",
+      "RelativePath": "images/VideosImages/9bc2cdf2-68be-4121-93f0-535a154fe005.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\VideosImages\\9bc2cdf2-68be-4121-93f0-535a154fe005.jpg"
     },
     {
       "Identity": "D:\\asp work\\CMScenter\\CMScenter\\wwwroot\\images\\VideosImages\\a2922aca-d14d-4a1c-b3fe-658f8b8c6bd2.png",

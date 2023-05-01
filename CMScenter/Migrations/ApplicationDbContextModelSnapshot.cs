@@ -596,20 +596,13 @@ namespace CMScenter.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CommenterName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("ApplicationUserId")
+                        .HasMaxLength(450)
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Content")
                         .HasMaxLength(2000)
                         .HasColumnType("nvarchar(2000)");
-
-                    b.Property<string>("CountryName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("IsVisible")
                         .HasColumnType("bit");
@@ -617,7 +610,17 @@ namespace CMScenter.Migrations
                     b.Property<DateTime>("RecordDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("VideoId")
+                        .HasColumnType("int");
+
+                    b.Property<long?>("VideoId1")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("VideoId1");
 
                     b.ToTable("VideoComments");
                 });
@@ -903,6 +906,21 @@ namespace CMScenter.Migrations
                     b.Navigation("Contributor");
 
                     b.Navigation("VideoCat");
+                });
+
+            modelBuilder.Entity("CMScenter.Views.Models.VideoComment", b =>
+                {
+                    b.HasOne("CMScenter.Views.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.HasOne("CMScenter.Views.Models.Video", "Video")
+                        .WithMany()
+                        .HasForeignKey("VideoId1");
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("Video");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

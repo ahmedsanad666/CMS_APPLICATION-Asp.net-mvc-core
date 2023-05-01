@@ -1,5 +1,6 @@
 ﻿using CMScenter.Data;
 using CMScenter.Views.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -15,28 +16,40 @@ namespace CMScenter.Areas.NourGram.Controllers
     {
 
         private readonly ApplicationDbContext _db;
-
-        public VideoController(ApplicationDbContext db)
+        private readonly UserManager<IdentityUser> _userManager;
+        public VideoController(ApplicationDbContext db , UserManager<IdentityUser> userManager)
         {
+            _userManager = userManager;
                 _db = db;
         }
 
-        public async Task<IActionResult> Index(string id)
+        public async Task<IActionResult> Index(string id,int Db)
         {
 
             List<Video> videoList = _db.Videos.Where(u => u.VideoStatus == VideoStatus.Approved).Include(u => u.Contributor).Include(u => u.VideoCat).Take(6).ToList();
+            Video videoDetails = _db.Videos.FirstOrDefault(u => u.Id == Db);
+            //List<VideoComment> allComments = _db.VideoComments.Include(u => u.ApplicationUser).ToList();
+            List<VideoComment> allComments = _db.VideoComments.Where(u => u.VideoId == Db).Include(u => u.ApplicationUser).ToList();
 
-            
+
+            VideoComment videoComment = new VideoComment();
+            ViewBag.vimeoId = id;
+            ViewBag.videoId = Db;
+
             NourViewModel viewModel = new NourViewModel()
             {
                 videos = videoList,
+                videItem = videoDetails,
+                comment = videoComment,
+                comments = allComments
+              
         
 
             };
-           
-            // Your Vimeo API link
 
-            string apiUrl = $"https://v1.nocodeapi.com/ahmedsanad99/vimeo/OnesUuHoiiMCkqfg/videoInfo?video_id={id}";
+        // Your Vimeo API link
+        
+            string apiUrl = $"https://v1.nocodeapi.com/ahmedsanad996/vimeo/ABrRxAoIulbuMlVw/videoInfo?video_id={id}";
 
             // Your Vimeo API access token
             string accessToken = "62f69ef9cc32275b8af1677536b468cc";
@@ -69,9 +82,23 @@ namespace CMScenter.Areas.NourGram.Controllers
             {
                 // Return an error message if the response is not successful
                 var errorMessage = $"Failed to retrieve video data. Status code: {response.StatusCode}";
-                ViewBag.ErrorMessage = errorMessage;
+                    ViewBag.ErrorMessage = errorMessage;
             }
                 return View(viewModel);
+        }
+
+
+        public  IActionResult AddConmment(VideoComment obj, string UserId, int videoId, string VimeoId , string content)
+        {
+
+            obj.VideoId = videoId;
+            obj.Content = content;
+            obj.ApplicationUserId = UserId;
+          _db.VideoComments.Add(obj);
+         _db.SaveChanges();
+            return RedirectToAction("Index","Video", new { id = VimeoId, Db = videoId });
+        
+            //return RedirectToAction("Index", "Video");
         }
 
     }

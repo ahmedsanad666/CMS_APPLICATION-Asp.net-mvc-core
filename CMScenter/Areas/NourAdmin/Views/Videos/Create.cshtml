@@ -35,7 +35,7 @@
             <input asp-for="Thumbnail" hidden />
 
 
-            <div class="row gap-1">
+            <div class="row ">
 
                 <div class="col-12 col-md-6">
                     <label asp-for="Thumbnail"></label>
@@ -96,12 +96,12 @@
 
                 </div>
                 @*............*@  
-                <div class="col-12 col-md-6">
+               
 
-                    <input type="hidden" name="UserId" value="@userManager.GetUserId(User)" />
+                    <input type="hidden" hidden name="UserId" value="@userManager.GetUserId(User)" />
                  
 
-                </div>
+          
                 @*............*@
                 <div class="col-12 col-md-6">
                     <label asp-for="ContributorId"></label>
