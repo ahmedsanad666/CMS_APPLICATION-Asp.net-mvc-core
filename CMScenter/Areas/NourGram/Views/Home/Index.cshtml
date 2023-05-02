@@ -64,7 +64,8 @@
                 else
                 {
                     <div class="col">
-                        <a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)">
+                        @*<a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)">*@
+                        <a href="NourGram/Video/Index?id=@videoId(el.Link)&Db=@el.Id">
                             <div class="card">
                                 <div class="card__header">
                                     <img src="@el.Thumbnail" alt="card__image" class="card__image" width="600">
