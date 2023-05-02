@@ -70,6 +70,18 @@ $(document).ready(function () {
         $('#' + activeId).addClass('active');
     }
 
+    //.......................
+
+    $(".videoDes").click(function () {
+
+        $(".videoDes").css({
+            "white-space": "normal",
+            "height" :"fit-content"
+        });
+        $(".videoDes p ").css({
+            "white-space": "normal"
+        });
+    })
 
 
 

@@ -43,21 +43,25 @@ string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
         @if(culture == "en")
         {
 
-        <ul class=" gap-3">
-            <li class="d-flex justify-content-center align-items-center gap-2 ">
-                    <div class=" userOptions" id="userOption">
-                        USER
-                    </div>
-                    <div>
-                        <h6>@UserManager.GetUserName(User)</h6>
-                    </div>
-            </li>
+        <ul >
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li class="userInfoSec">
+                        <div class=" userOptions" id="userOption">
+                            USER
+                        </div>
+                        <div>
+                            <h6>@UserManager.GetUserName(User)</h6>
+                        </div>
+                    </li>
            <li>
                <a asp-area="NourAdmin" asp-controller="NourAdmin"  asp-action="Index">
 
                     <i class="fa-solid fa-user mx   2"></i>  My Channel
                </a>
            </li>
+                }
+              
            <li class="culturOption">
 
                     <partial name="_CultureOptionMenu" />
@@ -67,21 +71,25 @@ string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
             </li>
         </ul>
         }else{
-            <ul class=" gap-3">
-                <li class="d-flex justify-content-center align-items-center gap-2 ">
-                    <div class=" userOptions" id="userOption">
-                        USRE
-                    </div>
-                    <div>
-                        <h6>@UserManager.GetUserName(User)</h6>
-                    </div>
-                </li>
-                <li>
-                    <a asp-area="NourAdmin" asp-controller="NourAdmin" asp-action="Index">
-
-                        <i class="fa-solid fa-user mx   2"></i>  قناتى
-                    </a>
-                </li>
+            <ul>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li class="d-flex justify-content-center align-items-center gap-2 ">
+                        <div class=" userOptions" id="userOption">
+                            USRE
+                        </div>
+                        <div>
+                            <h6>@UserManager.GetUserName(User)</h6>
+                        </div>
+                    </li>
+                    <li>
+                        <a asp-area="NourAdmin" asp-controller="NourAdmin" asp-action="Index">
+                                
+                            <i class="fa-solid fa-user mx   2"></i>  قناتى
+                        </a>
+                    </li>
+                }
+               
                 <li class="culturOption">
 
                     <partial name="_CultureOptionMenu" />

@@ -3,7 +3,7 @@
 @inject UserManager<IdentityUser> userManager
 @{
     string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
-    ViewData["Title"] = "Create Contributor";
+    ViewData["Title"] = "Edit Contributor";
     Layout = "~/Views/Shared/_NourLayout.cshtml";
 
 }
@@ -18,12 +18,12 @@
     @if (culture == "en")
     {
 
-        <h1 class="text-center my-5 "> Create Contributor</h1>
+        <h1 class="text-center my-5 "> Edit Contributor</h1>
 
     }
     else
     {
-        <h1 class="text-center my-5 "> انشاء عضو</h1>
+        <h1 class="text-center my-5 "> تعديل عضو</h1>
 
     }
 
@@ -43,7 +43,7 @@
                     <span asp-validation-for="ProfileImage" class="text-danger"></span>
 
                 </div>
-                @*........................
+                @*........................*@
                 <div class="col-12 col-md-6">
                     <label asp-for="ArName"></label>
                     <input type="text" asp-for="ArName" />
@@ -64,7 +64,7 @@
                     <span asp-validation-for="Biography" class="text-danger"></span>
 
                 </div>
-             
+
                 @*............*@
                 <div class="col-12 col-md-6">
                     <label asp-for="Website"></label>
@@ -82,7 +82,7 @@
 
 
                 </div>
-            
+
 
                 <div class="controllers d-flex g-5 flex-column flex-md-row mt-5">
 

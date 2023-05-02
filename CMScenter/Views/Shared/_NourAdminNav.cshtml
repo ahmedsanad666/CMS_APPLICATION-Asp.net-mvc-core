@@ -7,7 +7,7 @@
     <div class="AdminNavBar">
 @if(cultrue == "en"){
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary d-lg-block d-none">
         <div class="container-fluid">
             <a class="navbar-brand brand" asp-area="NourGram" asp-controller="Home" asp-action="Index">
                     <div class="brand d-md-block d-none">
@@ -50,8 +50,6 @@ else{
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" asp-area="NourAdmin" asp-controller="NourAdmin" asp-action="Index">لوحة التحكم</a>
                     </li>
-
-
                 </ul>
 
                <partial name="_Culture"/>

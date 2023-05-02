@@ -118,7 +118,7 @@ img {
     width: 300px;
     border-radius: 20px;
     height: 80vh;
-    padding: 1rem 0;
+    /*padding: 1rem 0;*/
    
     z-index: 99;
     background: #201c1c;
@@ -131,12 +131,43 @@ img {
     .optionMenu ul {
         /*display: flex;*/
         width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
+        height:100%;
+       
+        padding:1.5rem 0;
+
+
+       /* flex-direction: column;
+        align-items: flex-start;*/
        
     }
-.culturOption .culturOption li  .culturOption select{
-    width: 100% !important;
+    .optionMenu ul li{
+        padding:.3rem;
+       
+        transition:.2s all ease-in-out;
+    }
+        .optionMenu ul li:hover {
+            background: #161313;
+        }
+.logoutItem {
+    height: 3em !important;
+    cursor: pointer;
+}
+.userInfoSec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3rem 1rem;
+}
+.culturOption .culturOption li .culturOption select, .culture {
+    width: 100%;
+   background:none;
+    color: white;
+}
+
+
+
+.culturOption select.culture option , select.culture option {
+    color: black !important;
 }
    
 .LogInOption button {
@@ -350,10 +381,75 @@ padding:1.5rem .7rem;
     align-items: flex-start !important;
 }
 
+.videoInfo .like{
+    width:6%;
+float:right;
+}
+
+.videoDes {
+    max-width: 100%;
+
+    border-radius: 10px;
+  
+  
+    padding: 1rem 1.4rem;
+    background: #292626;  
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   height: 5rem;
+
+   transition:.3s all ease-in-out;
+
+   cursor:pointer;
+}
+
+    .videoDes:hover {
+        background: #4e4343;
+    }
+    .videoDes p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 80%;
+        cursor: pointer;
+        transition: .3s all ease-in-out;
+    }
+
+
+    .Comments button {
+        display: block;
+        width: 17%;
+        border: none;
+        color: white;
+        background: red;
+        letter-spacing: 2px;
+        padding: 0.5rem 0;
+        border-radius: 16px;
+    }
+
+.displayComments li {
+
+    background: #1e1d24;
+    border-radius: 20px;
+  
+}
+.displayComments p{
+    width: 90%;
+    padding: 1rem 3rem;
+}
+    }
+
+
+
+
+
+
+
 /*
    forms 
 */
-
 .settingsData {
     width: 75%;
     padding: 1.2rem 1rem;
@@ -384,7 +480,7 @@ padding:1.5rem .7rem;
         gap: 16px;
     }
 
-    .settingsData textarea {
+    .settingsData textarea ,.Comments textarea {
         background: none;
         color: var(--main-light);
         border-radius: 20px;

@@ -138,7 +138,6 @@ namespace CMScenter.Areas.NourAdmin.Controllers
 
             return View(obj);
         }
-
         //delete 
         public IActionResult Delete(int? id)
         {

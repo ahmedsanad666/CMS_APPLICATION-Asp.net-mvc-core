@@ -9,6 +9,7 @@ namespace CMScenter.Areas.Admin.Controllers
     [Area("Admin")]
     public class AppsettingsController : Controller
     {
+        
       private  readonly ApplicationDbContext _db;
         private readonly IWebHostEnvironment _hostEnvironment;
         public AppsettingsController(ApplicationDbContext db, IWebHostEnvironment hostEnvironment)
@@ -17,7 +18,7 @@ namespace CMScenter.Areas.Admin.Controllers
             _hostEnvironment = hostEnvironment;
         }
 
-        public   IActionResult  Index()
+        public IActionResult Index()
         {
             AppSittings settings = _db.AppSittings.FirstOrDefault(u => u.Id == 1);
             if (settings == null)
@@ -26,7 +27,7 @@ namespace CMScenter.Areas.Admin.Controllers
             }
 
             return View(settings);
-     }
+        }
 
         // Edit setttings
         // with param id 

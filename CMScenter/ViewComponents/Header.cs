@@ -3,6 +3,7 @@ using CMScenter.Views.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using NuGet.Configuration;
 
 namespace CMScenter.ViewComponents
 {
@@ -18,12 +19,17 @@ namespace CMScenter.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
+
+            AppSittings settings = await _db.AppSittings.FirstOrDefaultAsync();
+
+
+
             ViewModel vmModel = new ViewModel()
             {
-                appSettings = await _db.AppSittings.FirstOrDefaultAsync(u => u.Id == 1),
+                appSettings = settings == null ? new AppSittings() : settings,
                 subMenu = await _db.SubmenuBoxes.ToListAsync()
             };
-            AppSittings settings = await _db.AppSittings.FirstOrDefaultAsync(u => u.Id == 1);
+            //AppSittings settings = await _db.AppSittings.FirstOrDefaultAsync(u => u.Id == 1);
 
 
 

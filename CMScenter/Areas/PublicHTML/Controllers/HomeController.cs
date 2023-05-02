@@ -27,37 +27,43 @@ namespace CMScenter.Areas.PublicHTML.Controllers
         public IActionResult Index()
         {
       
-
-
            
-            AppSittings settings = _db.AppSittings.FirstOrDefault(u => u.Id == 1);
-         
-           
+
 
             int teamNumber = _db.TeamMembers.Count(); ;
            List<TeamMember> teamMember = _db.TeamMembers.ToList();
             List<Services> services = _db.Services.Include(u => u.courseCategory).ToList();
             List<Posts> posts = _db.Posts.Include(u => u.postsCategory).ToList();
 
+            
+            
+            AppSittings settings = _db.AppSittings.FirstOrDefault();
+
+            
+
+
+
 
 
             ViewData["teamNumber"] = teamNumber;
             var ViewModel = new ViewModel
             {
-                appSettings = settings,
+
+                appSettings = settings == null ? new AppSittings() : settings,
+
                 TeamMember = teamMember,
                 services = services,
                 posts = posts,
                 subMenu = _db.SubmenuBoxes.ToList()
 
             };
+
+
+
+
+
             return View(ViewModel);
         }
-
-        //public IActionResult Privacy()
-        //{
-        //    return View();
-        //}
 
 
         [HttpPost]

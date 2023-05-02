@@ -25,63 +25,96 @@
     }
 }
 
+
+
+
+
+
+
+
 <section class="videoPage">
-   
-        <div class="row min-vh-100">
-            <div class="col-lg-8 col-12 px-5 ">
-                <div class="d-flex flex-column gap-3">
 
-               
-                    <div class="video ">
-                       
-                     @Html.Raw(videoData.embed.html)
+    <div class="row min-vh-100" >
 
-               
+        <div class="col-lg-8 col-12 px-5 ">
+
+            <div class="d-flex flex-column gap-3">
+
+                <div class="video ">
+
+                    @Html.Raw(videoData.embed.html)
+
+
+                </div>
+                <div class="videoInfo ">
+                    <div class="like d-flex justify-content-between align-items-center" >
+
+                        @Html.Raw(videoData.metadata.connections.likes.total)          <i class="fa-solid fa-thumbs-up mx-3" style="font-size: 24px"></i>
                     </div>
-                    <div class="videoInfo">
-
-                    @Html.Raw(videoData.metadata.connections.likes.total)
-                    </div>
-                @*    <div class="Description">
-                        @if (culture == "en")
+                </div>
+                <div class="videoDes">
+                    @if (culture == "en")
                     {
-                    @Model.videItem.EnDescription
+                        <p>
 
-                    }
-                    else
-                    {
+                        @Model.videItem.EnDescription   
+                        </p>
+                        
+                    }else{
+                        <p>
+
                         @Model.videItem.ArDescription
-                    }*@
-                    </div>
-                        <div class="Comments">
-                    <form action="AddConmment"  method="post" >
+                        </p>
+                    }
+                </div>
+                <div class="Comments">
+                    <form action="AddConmment" method="post">
                         <input hidden asp-for="comment.Id" />
                         <input type="hidden" name="UserId" value="@userManager.GetUserId(User)" />
                         <input type="hidden" name="videoId" value="@ViewBag.videoId" />
                         <input type="hidden" name="VimeoId" value="@ViewBag.vimeoId" />
-                          <textarea name="content" class="comment_area p-3 px-2" rows="4" placeholder="Add Your Comment" ></textarea>
-                          <button>Send</button>
-                            </form>
+                        <textarea name="content" class="comment_area p-3 px-2" rows="4" placeholder="Add Your Comment"></textarea>
+                        <button class="my-2">Send</button>
+                    </form>
 
-                            <hr />
-                            <ul>
+                    <hr />
+                    <ul class="displayComments">
 
-                    @foreach(var el in Model.comments)
-                    {
-                        <li>@el.Content</li>
-                    }
+                        @foreach (var el in Model.comments)
+                        {
+                            @if(culture == "en")
+                            {
+                                
+                                <li class="my-3 py-4"><i class="fa-solid fa-comment mx-3"></i> @el.ApplicationUser.EnName
+                                <p>
+                                    @el.Content
+                                </p>
+                                </li>
+                            }
+                            else{
 
-                            </ul>
-                        </div>
-                 </div>
-              </div>
-         <div class="col py-3 gap-3">
+                                <li><i class="fa-solid fa-comment mx-3"></i> @el.ApplicationUser.ArName
+                                    <p>
+                                        @el.Content
+                                    </p>
+                                </li>
+
+
+                                }
+                        }
+
+                    </ul>
+                </div>
+                <hr />
+             </div>
+         </div>
+        <div class="col py-3 gap-3">
             @foreach (var el in Model.videos)
             {
-             
+
                 <div>
-                   <a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)" asp-route-Db="@el.Id">
-                  
+                    <a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)" asp-route-Db="@el.Id">
+
 
 
                         <div class="card">
@@ -112,14 +145,18 @@
                         </div>
                     </a>
 
-               </div>
+                </div>
 
             }
-                    
+
         </div>
-        </div>
-           
-        <div/>
-       
+    </div>
 
 </section>
+
+
+
+
+
+
+

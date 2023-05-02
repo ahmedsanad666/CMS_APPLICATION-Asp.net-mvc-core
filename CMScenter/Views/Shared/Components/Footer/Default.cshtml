@@ -8,7 +8,17 @@
     <div class="footerNav">
         <div class="row">
             <div class="col-md-3 d-md-block d-none ">
+              @* @if (Model.appSettings.Logo != null)
+                {
+                    
                 <img src="@Model.appSettings.Logo">
+                }*@
+
+
+                @if (Model.appSettings.Logo != null)
+                {
+                    <img src="@Model.appSettings.Logo"  alt="...">
+                }
 
             </div>
             <div class="col-6 d-md-block d-none">
@@ -67,22 +77,46 @@
 
                     <ul class="d-flex justify-content-evenly align-items-center gap-2">
                         <li>
-                            <a href="@Model.appSettings.FaceBook">
-
-                            <i class="bi bi-facebook"></i>
+                            @*@if (Model.appSettings.FaceBook != null)
+                            {
+                                <a href="@Model.appSettings.FaceBook">
+                                    <i class="bi bi-facebook"></i>
                             </a>
+                            }*@
+
+                            @if (Model.appSettings.FaceBook != null)
+                            {
+                                <img src="@Model.appSettings.FaceBook" alt="...">
+                            }
+
+                          
                          </li>
                         <li>
-                            <a href="@Model.appSettings.Youtube">
-                            <i class="bi bi-youtube"></i>
-                        </a>    
+                          @*  @if (Model.appSettings.Youtube != null)
+                            {
+                                <a href="@Model.appSettings.Youtube">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            }*@
+
+
+                            @if (Model.appSettings.Youtube != null)
+                            {
+                                <img src="@Model.appSettings.Youtube" alt="...">
+                            }
                         </li>
                         <li>
-                            <a href="@Model.appSettings.Twitter">
-                            
-                                <i class="bi bi-twitter"></i>
-                           
-                              </a>
+                         @*   @if (Model.appSettings.Twitter != null)
+                            {
+                                <a href="@Model.appSettings.Twitter">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            }*@
+
+                            @if (Model.appSettings.Twitter != null)
+                            {
+                                <img src="@Model.appSettings.Twitter" alt="...">
+                            }
                                 </li>
 
                     </ul>
@@ -109,8 +143,16 @@
                 }
          </div>
         <div class="text-center d-md-none logo-down my-4">
-            <img src="@Model.appSettings.Logo">
+          @* @if (Model.appSettings.Logo != null)
+            {
 
+                <img src="@Model.appSettings.Logo">
+            }*@
+
+            @if (Model.appSettings.Logo != null)
+            {
+                <img src="@Model.appSettings.Logo" alt="...">
+            }
         </div>
 
         <div class=" Rights_reserved py-4">

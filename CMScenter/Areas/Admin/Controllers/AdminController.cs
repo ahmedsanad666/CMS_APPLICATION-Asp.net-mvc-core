@@ -23,24 +23,15 @@ namespace CMScenter.Areas.Admin.Controllers
         public IActionResult Index()
         {
             // appsetttings last updated 
-            AppSittings settings = _db.AppSittings.FirstOrDefault(u => u.Id == 1);
+            AppSittings settings = _db.AppSittings.FirstOrDefault();
 
 
       int  teamCount = _db.TeamMembers.Count();
 
-            ////if(settingsData != null)
-            ////{   
-            ////    ViewBag.settingsLastupdated = settingsData.LastUpdated;
-            ////}   
-            ///
             ViewBag.teamCount = teamCount;
             var ViewModel = new ViewModel
             {
-                appSettings = settings,
-
-         
-          
-               
+                appSettings = settings == null ? new AppSittings() : settings
 
             };
 
