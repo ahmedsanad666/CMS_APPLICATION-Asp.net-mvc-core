@@ -72,15 +72,27 @@ $(document).ready(function () {
 
     //.......................
 
+    let long = false;
     $(".videoDes").click(function () {
-
-        $(".videoDes").css({
-            "white-space": "normal",
-            "height" :"fit-content"
-        });
-        $(".videoDes p ").css({
-            "white-space": "normal"
-        });
+        long = !long;
+        if (long) {
+            $(".videoDes").css({
+                "white-space": "nowrap",
+                "height": "5rem"
+            });
+            $(".videoDes p ").css({
+                "white-space": "nowrap"
+            });
+        } else {
+            $(".videoDes").css({
+                "white-space": "normal",
+                "height": "fit-content"
+            });
+            $(".videoDes p ").css({
+                "white-space": "normal"
+            });
+        }
+     
     })
 
 

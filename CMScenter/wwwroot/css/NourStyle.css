@@ -395,11 +395,10 @@ float:right;
     padding: 1rem 1.4rem;
     background: #292626;  
     
-    white-space: nowrap;
+   white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-   height: 5rem;
-
+   height: 5rem; 
    transition:.3s all ease-in-out;
 
    cursor:pointer;
@@ -410,11 +409,13 @@ float:right;
     }
     .videoDes p {
         white-space: nowrap;
-        overflow: hidden;
+      overflow: hidden;
         text-overflow: ellipsis;
         max-width: 80%;
         cursor: pointer;
-        transition: .3s all ease-in-out;
+      
+       transition: .3s all ease-in-out;
+       word-wrap:break-word;
     }
 
 
@@ -423,7 +424,7 @@ float:right;
         width: 17%;
         border: none;
         color: white;
-        background: red;
+        background: red;    
         letter-spacing: 2px;
         padding: 0.5rem 0;
         border-radius: 16px;
@@ -438,8 +439,9 @@ float:right;
 .displayComments p{
     width: 90%;
     padding: 1rem 3rem;
+    word-wrap:break-word;
 }
-    }
+    
 
 
 
