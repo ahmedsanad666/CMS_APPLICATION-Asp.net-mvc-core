@@ -148,9 +148,17 @@
 
         @*............................... latest Videos *@
     <div class="container ">
-       
-        <h1 class="CateogryHeader my-3">Latest Videos</h1>
-        
+        @if(Culture == "en")
+        {
+
+            <h1 class="CateogryHeader my-3">Latest Videos</h1>
+        }
+        else
+        {
+            <h1 class="CateogryHeader my-3">احدث الفيديوهات</h1>
+
+        }
+
         <div class="row gap-3">
             @foreach (var el in Model.latestVideos)
             {
@@ -242,7 +250,15 @@
 
     @*............................... latest Videos *@
     <div class="container ">
-        <h1 class="CateogryHeader my-3">Featured Videos</h1>
+        @if(Culture == "en"){
+
+            <h1 class="CateogryHeader my-3">Featured Videos</h1>
+        }
+        else
+        {
+            <h1 class="CateogryHeader my-3">المفضلة</h1>
+
+        }
         <div class="row gap-3">
             @foreach (var el in Model.FeaturedVideos)
             {
