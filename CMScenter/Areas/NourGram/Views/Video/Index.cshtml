@@ -114,42 +114,83 @@
         <div class="col py-3 gap-3">
             @foreach (var el in Model.videos)
             {
+                @if(culture == "en")
+                {
+                    <div class="my-3">
+                        <a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)" asp-route-Db="@el.Id">
 
-                <div class="my-3" >
-                    <a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)" asp-route-Db="@el.Id">
 
 
+                            <div class="card">
+                                <div class="card__header">
+                                    <img src="@el.Thumbnail" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="card__body">
+                                    <span class="tag tag-blue">@el.VideoCat.EnName</span>
+                                    <h5>@el.EnTitle</h5>
 
-                        <div class="card">
-                            <div class="card__header">
-                                <img src="@el.Thumbnail" alt="card__image" class="card__image" width="600">
-                            </div>
-                            <div class="card__body">
-                                <span class="tag tag-blue">@el.VideoCat.EnName</span>
-                                <h5>@el.EnTitle</h5>
+                                </div>
+                                <div class="card__footer">
+                                    <div class="user">
+                                        <img src="@el.Contributor.ProfileImage" alt="user__image" class="user__image">
+                                        <div class="user__info">
 
-                            </div>
-                            <div class="card__footer">
-                                <div class="user">
-                                    <img src="@el.Contributor.ProfileImage" alt="user__image" class="user__image">
-                                    <div class="user__info">
+                                            <h6>@el.Contributor.EnName</h6>
+                                            <small>2h ago</small>
+                                        </div>
+                                    </div>
 
-                                        <h6>@el.Contributor.EnName</h6>
-                                        <small>2h ago</small>
+                                    <div>
+                                        <small>
+                                            350k  views
+                                        </small>
                                     </div>
                                 </div>
+                            </div>
+                        </a>
 
-                                <div>
-                                    <small>
-                                        350k  views
-                                    </small>
+                    </div>
+                }
+                else
+                {
+                    <div class="my-3">
+                        <a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)" asp-route-Db="@el.Id">
+
+
+
+                            <div class="card">
+                                <div class="card__header">
+                                    <img src="@el.Thumbnail" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="card__body">
+                                    <span class="tag tag-blue">@el.VideoCat.ArName</span>
+                                    <h5>@el.ArTitle</h5>
+
+                                </div>
+                                <div class="card__footer">
+                                    <div class="user">
+                                        <img src="@el.Contributor.ProfileImage" alt="user__image" class="user__image">
+                                        <div class="user__info">
+
+                                            <h6>@el.Contributor.ArName</h6>
+                                            <small>2h ago</small>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <small>
+                                            350k  views
+                                        </small>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
 
-                </div>
+                    </div>
 
+                }
+
+               
             }
 
         </div>

@@ -580,9 +580,13 @@ body.dark .videoDes {
 }
 
 .displayComments li {
+    background: #bfbfc1;
+    border-radius: 20px;
+}
+
+body.dark .displayComments li {
 
     background: #1e1d24;
-    border-radius: 20px;
   
 }
 .displayComments p{
