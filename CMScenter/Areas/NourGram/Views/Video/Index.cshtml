@@ -7,7 +7,7 @@
     Layout = "~/Views/Shared/_NourLayout.cshtml";
     string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
     var videoData = ViewBag.VideoData;
-
+    Console.WriteLine("s");
 
 
 }
@@ -115,7 +115,7 @@
             @foreach (var el in Model.videos)
             {
 
-                <div>
+                <div class="my-3" >
                     <a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)" asp-route-Db="@el.Id">
 
 

@@ -16,18 +16,24 @@ string culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
         <div class="col">
           <div class="brand">
                 <a asp-area="NourGram" asp-controller="Home" asp-action="Index">
-                    <img  src="~/images/nourLogo/nourLogo.png"/>
+                    <img  src="~/images/nourLogo/nourLogo.png"/>    
                 </a>
           </div>
         </div>
-        <div class="col-md-7 col-6  justify-content-center align-items-center d-sm-flex d-none ">
-            
-          <form>
+        <div class="col-md-7 col-6  justify-content-center align-items-center d-flex">
+
+            <form class="d-md-block d-none">
               <input  placeholder="Search"/>
               <button class="searchBtn">
                     <i class="fa-solid fa-magnifying-glass"></i>
               </button>
           </form>
+            <div class="toggle" id="ToogleId">
+                <input type="checkbox" id="toggle">
+             
+                <label for="toggle"></label>
+      
+            </div>  
         </div>
         <div class="col d-flex justify-content-center align-items-center">
           

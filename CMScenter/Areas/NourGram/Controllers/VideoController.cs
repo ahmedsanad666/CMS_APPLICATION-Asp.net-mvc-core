@@ -42,24 +42,22 @@ namespace CMScenter.Areas.NourGram.Controllers
                 videItem = videoDetails,
                 comment = videoComment,
                 comments = allComments
-              
-        
 
             };
 
         // Your Vimeo API link
         
-            string apiUrl = $"https://v1.nocodeapi.com/ahmedsanad996/vimeo/ABrRxAoIulbuMlVw/videoInfo?video_id={id}";
+            string apiUrl = $"https://v1.nocodeapi.com/ahmedsanad996/vimeo/DNQRvQnTiiiTTIPe/videoInfo?video_id={id}";
 
             // Your Vimeo API access token
-            string accessToken = "62f69ef9cc32275b8af1677536b468cc";
+            string accessToken = "2a6e27065780565ffa7c8e1b3ebadf5d";
 
             // Create a new instance of the HttpClient
             var httpClient = new HttpClient();
 
             // Set the Authorization header with your Vimeo access token
             httpClient.DefaultRequestHeaders.Authorization =
-                new AuthenticationHeaderValue("NourGramVideo", accessToken);
+                new AuthenticationHeaderValue("NourGramWeb", accessToken);
 
             // Make a GET request to the Vimeo API link
             var response = await httpClient.GetAsync(apiUrl);

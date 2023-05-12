@@ -1,25 +1,40 @@
-﻿
-
-
+﻿let current = localStorage.getItem("theme");
+document.body.classList.add(current);
 $(document).ready(function () {
 
+
     if ($("html").attr('dir') == "rtl") {
+        if ($("ToogleId").hasClass("rightToggle")) {
 
-   
-
+            $("#ToogleId").removeClass("rightToggle");
+        }
+        $("#ToogleId").addClass("leftToggle");
         $(".searchBtn").css({
             "left": "10%",
-            "border-right": " 1px solid #231c1c"
+            "border-right": " 1px solid #231c1c",
+               "border-top-left-radius": "21px",
+            "border-bottom-left-radius": "21px"
         });
 
         $(".optionMenu").css({
             "left": "10%",
 
         })
+
     } else {
+        if ($("ToogleId").hasClass("leftToggle")) {
+
+            $("#ToogleId").removeClass("leftToggle");
+        }
+        $("#ToogleId").addClass("rightToggle");
+        console.log("left");
+      
         $(".searchBtn").css({
             "right": "10%",
-            "border-left": " 1px solid #231c1c"
+            "border-left": " 1px solid #231c1c",
+             "border-top-right-radius": "21px",
+             "border-bottom-right-radius": "21px"
+
         })
         $(".optionMenu").css({
             "right": "10%",
@@ -105,3 +120,19 @@ $(document).ready(function () {
 
 })
 
+const toggle = document.querySelector('#toggle');
+let theme = false;
+
+toggle.addEventListener('change', () => {
+  
+    document.body.classList.toggle('dark');
+    //document.querySelector(".HomeNav").classList.toggle('dark');
+
+    if (document.body.classList.contains("dark")) {
+
+        localStorage.setItem("theme", "dark");
+    } else {
+
+        localStorage.setItem("theme", "light");
+    }
+})

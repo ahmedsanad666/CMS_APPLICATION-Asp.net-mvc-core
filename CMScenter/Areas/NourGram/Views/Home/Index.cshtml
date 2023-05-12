@@ -5,6 +5,7 @@
     string Culture = System.Globalization.CultureInfo.CurrentCulture.ToString();
     Layout = "~/Views/Shared/_NourLayout.cshtml";
 
+
 }
 
 @functions {
@@ -19,9 +20,43 @@
             return VideoId;
     }
   }
+ @*.............................................................................*@
 
-<div class="AllVideos  py-5 px-4">
- 
+<div class="AllVideos  py-2 px-4">
+ <div class="allCategories col-10  mx-auto py-3 mb-2"> 
+            
+        <ul class="d-flex justify-content-center  align-items-center gap-5">
+
+      @if(Culture == "en")
+            {
+                @foreach(var el in Model.videoCtegories)
+                {
+                    <li>
+                        <a asp-area="NourGram" asp-controller="Home" asp-action="Index" asp-route-catId="@el.Id">
+                        @el.EnName
+
+                        </a>
+                        </li>
+                    
+                }
+            }
+            else
+            {
+                @foreach(var el in Model.videoCtegories)
+                {
+                    <li>
+                        <a asp-area="NourGram" asp-controller="Home" asp-action="Index" asp-route-catId="@el.Id">
+                            @el.ArName
+
+                        </a>
+                    </li>
+                }
+            }
+
+        </ul>
+       
+            </div>
+ @*.............................................................................*@
     <div class="container ">
         <div class="row gap-3">
             @foreach(var el in Model.videos)
@@ -102,12 +137,196 @@
             }
       
         
-        
 
            
             
         
          
+        </div>
+    </div>
+        <hr />
+
+        @*............................... latest Videos *@
+    <div class="container ">
+       
+        <h1 class="CateogryHeader my-3">Latest Videos</h1>
+        
+        <div class="row gap-3">
+            @foreach (var el in Model.latestVideos)
+            {
+                @if (Culture == "en")
+                {
+                    <div class="col">
+                        @*<a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)">*@
+                        <a href="NourGram/Video/Index?id=@videoId(el.Link)&Db=@el.Id">
+                            <div class="card">
+                                <div class="card__header">
+                                    <img src="@el.Thumbnail " alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="card__body">
+                                    <span class="tag tag-blue">@el.VideoCat.EnName</span>
+                                    <h5>@el.EnTitle</h5>
+
+                                </div>
+                                <div class="card__footer">
+                                    <div class="user">
+                                        <img src="@el.Contributor.ProfileImage" alt="user__image" class="user__image">
+                                        <div class="user__info">
+
+                                            <h6>@el.Contributor.EnName</h6>
+                                            <small>2h ago</small>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <small>
+                                            350k  views
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                }
+                else
+                {
+                    <div class="col">
+                        @*<a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)">*@
+                        <a href="NourGram/Video/Index?id=@videoId(el.Link)&Db=@el.Id">
+                            <div class="card">
+                                <div class="card__header">
+                                    <img src="@el.Thumbnail" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="card__body">
+                                    <span class="tag tag-blue">@el.VideoCat.ArName</span>
+                                    <h5>@el.ArTitle</h5>
+
+                                </div>
+                                <div class="card__footer">
+                                    <div class="user">
+                                        <img src="@el.Contributor.ProfileImage" alt="user__image" class="user__image">
+                                        <div class="user__info">
+
+                                            <h6>@el.Contributor.ArName</h6>
+                                            <small>2h ago</small>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <small>
+                                            350k  views
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                }
+
+
+
+            }
+
+
+
+
+
+
+
+        </div>
+    </div>
+    @*...............*@
+    <hr />
+
+    @*............................... latest Videos *@
+    <div class="container ">
+        <h1 class="CateogryHeader my-3">Featured Videos</h1>
+        <div class="row gap-3">
+            @foreach (var el in Model.FeaturedVideos)
+            {
+                @if (Culture == "en")
+                {
+                    <div class="col">
+                        @*<a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)">*@
+                        <a href="NourGram/Video/Index?id=@videoId(el.Link)&Db=@el.Id">
+                            <div class="card">
+                                <div class="card__header">
+                                    <img src="@el.Thumbnail " alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="card__body">
+                                    <span class="tag tag-blue">@el.VideoCat.EnName</span>
+                                    <h5>@el.EnTitle</h5>
+
+                                </div>
+                                <div class="card__footer">
+                                    <div class="user">
+                                        <img src="@el.Contributor.ProfileImage" alt="user__image" class="user__image">
+                                        <div class="user__info">
+
+                                            <h6>@el.Contributor.EnName</h6>
+                                            <small>2h ago</small>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <small>
+                                            350k  views
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                }
+                else
+                {
+                    <div class="col">
+                        @*<a asp-area="NourGram" asp-controller="Video" asp-action="Index" asp-route-id="@videoId(el.Link)">*@
+                        <a href="NourGram/Video/Index?id=@videoId(el.Link)&Db=@el.Id">
+                            <div class="card">
+                                <div class="card__header">
+                                    <img src="@el.Thumbnail" alt="card__image" class="card__image" width="600">
+                                </div>
+                                <div class="card__body">
+                                    <span class="tag tag-blue">@el.VideoCat.ArName</span>
+                                    <h5>@el.ArTitle</h5>
+
+                                </div>
+                                <div class="card__footer">
+                                    <div class="user">
+                                        <img src="@el.Contributor.ProfileImage" alt="user__image" class="user__image">
+                                        <div class="user__info">
+
+                                            <h6>@el.Contributor.ArName</h6>
+                                            <small>2h ago</small>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <small>
+                                            350k  views
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                }
+
+
+
+            }
+
+
+
+
+
+
+
         </div>
     </div>
 </div>

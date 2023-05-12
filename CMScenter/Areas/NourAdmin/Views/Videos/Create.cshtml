@@ -72,17 +72,25 @@
 
                 </div>
                 @*............*@
-                <div class="col-12 col-md-6">
+          @*      <div class="col-12 col-md-6">
                     <label asp-for="Link"></label>
                   
                     <input  asp-for="Link">
                     <span asp-validation-for="Link" class="text-danger"></span>
 
+                </div>*@
+                @*............*@
+                  <div class="col-12 col-md-6">
+                    <label for="videoFile"> Upload File</label>
+                  
+                    <input id="videoFile" type="file" name="VideoFile">
+               
+
                 </div>
                 @*............*@
 
                 @*............*@
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 position-relative py-4">
                     <label asp-for="IsFeatured"></label>
                     <input type="checkbox" asp-for="IsFeatured">
                     <span asp-validation-for="IsFeatured" class="text-danger"></span>

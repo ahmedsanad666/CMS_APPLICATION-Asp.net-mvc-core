@@ -1175,3 +1175,11 @@ D:\asp work\CMScenter\CMScenter\obj\Debug\net6.0\CMScenter.ViewComponents.Resour
 D:\asp work\CMScenter\CMScenter\obj\Debug\net6.0\CMScenter.ViewComponents.Resources.Areas.PublicHTML.Views.Home.Index.en.resources
 D:\asp work\CMScenter\CMScenter\obj\Debug\net6.0\CMScenter.ViewComponents.Resources.Views.Shared.Components.Header.Default.ar.resources
 D:\asp work\CMScenter\CMScenter\obj\Debug\net6.0\CMScenter.ViewComponents.Resources.Views.Shared._loginPartial.ar.resources
+D:\asp work\CMScenter\CMScenter\bin\Debug\net6.0\FireSharp.dll
+D:\asp work\CMScenter\CMScenter\bin\Debug\net6.0\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\asp work\CMScenter\CMScenter\bin\Debug\net6.0\Microsoft.Threading.Tasks.Extensions.dll
+D:\asp work\CMScenter\CMScenter\bin\Debug\net6.0\Microsoft.Threading.Tasks.dll
+D:\asp work\CMScenter\CMScenter\bin\Debug\net6.0\System.Net.Http.Extensions.dll
+D:\asp work\CMScenter\CMScenter\bin\Debug\net6.0\System.Net.Http.Primitives.dll
+D:\asp work\CMScenter\CMScenter\bin\Debug\net6.0\JetBrains.Annotations.dll
+D:\asp work\CMScenter\CMScenter\bin\Debug\net6.0\VimeoDotNet.dll

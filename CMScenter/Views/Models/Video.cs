@@ -29,7 +29,7 @@ namespace CMScenter.Views.Models
         [ValidateNever]
         public string Thumbnail { get; set; }
 
-        [Required]
+  
         public string Link { get; set; }
 
         public int Views { get; set; }

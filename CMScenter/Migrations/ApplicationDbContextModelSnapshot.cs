@@ -518,7 +518,6 @@ namespace CMScenter.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Link")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("RecordDate")

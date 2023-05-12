@@ -13,8 +13,12 @@
         "packagesPath": "C:\\Users\\ahmme\\.nuget\\packages\\",
         "outputPath": "D:\\asp work\\CMScenter\\CMScenter\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\ahmme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +45,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FireSharp": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
+            "JetBrains.Annotations": {
+              "target": "Package",
+              "version": "[2022.3.1, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.15, )"
@@ -87,6 +100,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "VimeoDotNet": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             }
           },
           "imports": [

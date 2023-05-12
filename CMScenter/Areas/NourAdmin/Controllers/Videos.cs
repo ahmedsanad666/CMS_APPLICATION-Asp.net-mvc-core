@@ -1,14 +1,24 @@
 ﻿
 
+using Azure.Core;
 using CMScenter.Data;
 using CMScenter.Views.Models;
+using FireSharp.Config;
+using FireSharp.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Hosting;
+using System.Diagnostics;
+using System.Net;
+using System.Text.Json;
+using VimeoDotNet;
+using VimeoDotNet.Models;
+using VimeoDotNet.Net;
 using static CMScenter.Views.Models.Common;
+
 
 namespace CMScenter.Areas.NourAdmin.Controllers
 {
@@ -18,10 +28,9 @@ namespace CMScenter.Areas.NourAdmin.Controllers
     {
 
         private readonly ApplicationDbContext _db;
-        private IWebHostEnvironment _hostEnvironment;
+        private IWebHostEnvironment _hostEnvironment;   
         private readonly UserManager<IdentityUser> _userManager;
-
-     
+    
 
 
         public Videos(ApplicationDbContext db, IWebHostEnvironment hostEnvironment , UserManager<IdentityUser> userManager )
@@ -32,10 +41,26 @@ namespace CMScenter.Areas.NourAdmin.Controllers
       
         }
 
-        public IActionResult Index()
+ 
+
+        public async Task<IActionResult> Index()
         {
 
-            List<Video> allvideos;
+            string AccessToken = "60d02ef45091f2d7ecda6c7d1514532a";
+
+            try {
+
+                VimeoClient vimeoClient = new VimeoClient(AccessToken);
+                var authCheck = await vimeoClient.GetAccountInformationAsync();
+           
+            }catch(Exception e) {
+
+         Console.WriteLine($"messsage:{e}");
+            }
+
+            // vemeo auth.................
+            List<Views.Models.Video> allvideos;
+   
             if (User.IsInRole("Admin"))
             {   
 
@@ -47,9 +72,27 @@ namespace CMScenter.Areas.NourAdmin.Controllers
 
                 allvideos = _db.Videos.Where(u => u.ApplicationUserId == userId).Include(u => u.Contributor).ToList();
             }
-          
+         
+            //...................
 
+
+         
             return View(allvideos);
+        }
+
+        public JsonResult GetUserData()
+        {
+            // Retrieve user data from the database using the provided id
+            var allvideos = _db.Videos.Include(u => u.Contributor).ToList();
+            //var serializerOptions = new JsonSerializerOptions
+            //{
+            //    Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+            //    WriteIndented = true,
+             
+            //};
+            //var jsonResult = new JsonResult(allvideos, serializerOptions);
+            // Return the user data as JSON
+            return Json(allvideos );
         }
 
         //edit
@@ -91,10 +134,10 @@ namespace CMScenter.Areas.NourAdmin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Video obj, IFormFile file, string userId)
+        public IActionResult Edit(Views.Models.Video obj, IFormFile file, string userId)
         {
             obj.ApplicationUserId = userId;
-
+                
             if (ModelState.IsValid)
             {
                 string wwwRootPath = _hostEnvironment.WebRootPath;
@@ -136,7 +179,7 @@ namespace CMScenter.Areas.NourAdmin.Controllers
 
         public IActionResult Create()
         {
-            Video video = new Video();
+            Views.Models.Video video = new Views.Models.Video();
            
 
 
@@ -164,44 +207,96 @@ namespace CMScenter.Areas.NourAdmin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Video obj, IFormFile file,string userId)
+        public async Task<IActionResult> Create(Views.Models.Video obj, IFormFile file,string userId,IFormFile VideoFile)
         {
-            obj.ApplicationUserId = userId; 
-            
-            if (ModelState.IsValid)
-            {
-                string wwwRootPath = _hostEnvironment.WebRootPath;
-                if (file != null)
-                {
-                    string FileName = Guid.NewGuid().ToString();
-                    // find the final location
-                    var upload = Path.Combine(wwwRootPath, @"images/VideosImages");
-                    var extention = Path.GetExtension(file.FileName);
 
-                    if (obj.Thumbnail != null)
+
+                    string uploadStatus = "";
+              obj.ApplicationUserId = userId;
+            string AccessToken = "60d02ef45091f2d7ecda6c7d1514532a";
+            try {
+
+                if (ModelState.IsValid)
+                {
+            
+                    string wwwRootPath = _hostEnvironment.WebRootPath;
+                    if (file != null)
                     {
-                        var oldPath = Path.Combine(wwwRootPath, obj.Thumbnail.TrimStart('\\'));
-                        if (System.IO.File.Exists(oldPath))
+                        string FileName = Guid.NewGuid().ToString();
+                        // find the final location
+                        var upload = Path.Combine(wwwRootPath, @"images/VideosImages");
+                        var extention = Path.GetExtension(file.FileName);
+
+                        if (obj.Thumbnail != null)
                         {
-                            System.IO.File.Delete(oldPath);
+                            var oldPath = Path.Combine(wwwRootPath, obj.Thumbnail.TrimStart('\\'));
+                            if (System.IO.File.Exists(oldPath))
+                            {
+                                System.IO.File.Delete(oldPath);
+                            }
+                        }
+                        using (var fileStreams = new FileStream(Path.Combine(upload, FileName + extention), FileMode.Create))
+                        {
+                            file.CopyTo(fileStreams);
+                        };
+
+
+
+                        obj.Thumbnail = @"\images\VideosImages\" + FileName + extention;
+
+                    }
+                    //..................upload to vimeo
+                    if(VideoFile != null)
+                    {
+                        ServicePointManager.Expect100Continue = true;
+                        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                    VimeoClient vimeoClient = new VimeoClient(AccessToken);
+                    var authCheck = await vimeoClient.GetAccountInformationAsync();
+                        if(authCheck.Name != null)
+                        {
+                            UploadRequest uploadRequest = new UploadRequest() ;
+                     
+                            BinaryContent binaryContent = new BinaryContent(VideoFile.OpenReadStream(), VideoFile.ContentType);
+
+                          
+                            int chunkSize = 0;
+                            int contentLength = VideoFile.ContentType.Length;   
+                            int temp1 = contentLength / 1024;
+                            if(temp1 > 1) {
+                            chunkSize = temp1 / 1024;
+                                chunkSize = chunkSize / 10;
+                                chunkSize = chunkSize * 1048576;
+                            }
+                            else
+                            {
+                                chunkSize = 1048576; 
+
+                            }
+                            //uploadRequest.Ticket.Name = obj.EnTitle;
+                           
+                            uploadRequest = (UploadRequest)await vimeoClient.UploadEntireFileAsync(binaryContent, chunkSize, null);
+                        
+                            uploadStatus = string.Concat("file uploaded", "https://vimeo.com/", uploadRequest.ClipId.Value.ToString(), "/none");
+                            obj.Link = uploadRequest.ClipUri;
+                            
+                            Console.WriteLine("sdf");
                         }
                     }
-                    using (var fileStreams = new FileStream(Path.Combine(upload, FileName + extention), FileMode.Create))
-                    {
-                        file.CopyTo(fileStreams);
-                    };
-
-
-
-                    obj.Thumbnail = @"\images\VideosImages\" + FileName + extention;
-
+                    //............................
+                    _db.Videos.Add(obj);
+                    _db.SaveChanges();
+                    return RedirectToAction("Index");
                 }
-                _db.Videos.Add(obj);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+
+
+
+            }
+            catch (Exception ex)
+            {
+                 uploadStatus = ("failed" + ex.Message);
             }
 
-
+            ViewBag.uploadStatus = uploadStatus;
             return View(obj);
         }
 
@@ -236,7 +331,7 @@ namespace CMScenter.Areas.NourAdmin.Controllers
         public IActionResult PinnedVideos()
         {
 
-           List<Video> allvideos = _db.Videos.Where(u => u.VideoStatus == VideoStatus.UnderReview).Include(u => u.Contributor).ToList();
+           List<Views.Models.Video> allvideos = _db.Videos.Where(u => u.VideoStatus == VideoStatus.UnderReview).Include(u => u.Contributor).ToList();
             return View(allvideos);
         }
 
